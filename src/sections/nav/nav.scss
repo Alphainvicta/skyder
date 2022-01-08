@@ -1,0 +1,18 @@
+.nav-cont {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  .logo-icon {
+    margin-left: 110px;
+    flex-grow: 2;
+  }
+
+  .burguer {
+    margin-right: 110px;
+    margin-left: 50px;
+  }
+}

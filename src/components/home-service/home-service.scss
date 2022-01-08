@@ -1,0 +1,32 @@
+.hservice-cont {
+  hr {
+    margin: 58px 110px;
+    border: 2px solid #000000;
+    background-color: #000000;
+  }
+
+  .service-cont {
+    height: 736px;
+    margin-left: 110px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .service-title {
+      margin-bottom: 13px;
+    }
+
+    .service-description {
+      margin-bottom: 102px;
+    }
+
+    .image-cont {
+      align-self: flex-end;
+
+      img {
+        width: 1067px;
+        height: 736px;
+      }
+    }
+  }
+}

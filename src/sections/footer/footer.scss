@@ -1,0 +1,36 @@
+.footer-cont {
+  margin-top: 117px;
+  height: 157px;
+  width: 100%;
+  top: 100%;
+  position: static;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 210%;
+  /* or 50px */
+
+  color: #ffffff;
+
+  .rights {
+    opacity: 0.7;
+    flex-grow: 2;
+    margin-left: 110px;
+  }
+
+  .number {
+    opacity: 0.7;
+  }
+
+  .mail {
+    opacity: 0.7;
+    margin-right: 110px;
+  }
+}
