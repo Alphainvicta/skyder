@@ -7,7 +7,7 @@ const Footer = () => (
             Skyder © 2022 - todos los derechos reservados.
         </div>
         <div className='number'>
-            33 1751 6117
+            (33) 1751-6117
         </div>
         <div className='mail'>
             skyder@gmail.com

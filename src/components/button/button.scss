@@ -1,0 +1,16 @@
+@import url("../../styles/fonts.scss");
+
+.button-cont {
+  button {
+    width: 306px;
+    height: 77px;
+    background: #396ded;
+    border: solid #396ded;
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 210%;
+    text-align: center;
+    color: #ffffff;
+  }
+}

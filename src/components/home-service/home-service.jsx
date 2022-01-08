@@ -1,5 +1,6 @@
 import React from 'react';
 import './home-service.scss';
+import Button from '../button/button.jsx';
 import iservice from './images/download.png';
 
 const Hservice = () => (
@@ -8,13 +9,13 @@ const Hservice = () => (
         <div className='service-cont'>
             <div className='text-cont'>
                 <div className='service-title'>
-                    servicio 1
+                    Brand & Digital
                 </div>
                 <div className='service-description'>
-                    descripcion 1
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                 </div>
                 <div className='more-button'>
-                    <button>boton</button>
+                    <Button text={'Request a Quote'}/>
                 </div>
             </div>
             <div className='image-cont'>
