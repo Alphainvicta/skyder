@@ -1,25 +1,25 @@
 import React from 'react';
 import './home-service.scss';
+import { Link } from "react-router-dom";
 import Button from '../button/button.jsx';
-import iservice from './images/download.png';
 
-const Hservice = () => (
+const Hservice = ({title, description, image, link}) => (
     <div className='hservice-cont'>
         <hr/>
         <div className='service-cont'>
             <div className='text-cont'>
                 <div className='service-title'>
-                    Brand & Digital
+                    {title}
                 </div>
                 <div className='service-description'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    {description}
                 </div>
                 <div className='more-button'>
-                    <Button text={'Request a Quote'}/>
+                    <Link to={link}><Button text={'Request a Quote'} /></Link>
                 </div>
             </div>
             <div className='image-cont'>
-                <img src={iservice} alt='iservice'/>
+                <img src={image} alt='iservice'/>
             </div>
         </div>
     </div>

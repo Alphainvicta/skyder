@@ -1,0 +1,24 @@
+.description-cont {
+  margin: 110px;
+  margin-top: 175px;
+  margin-bottom: 173px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .title {
+    align-self: baseline;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 210%;
+    color: #000000;
+  }
+
+  .details {
+    width: 821px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 210%;
+    color: #000000;
+  }
+}
