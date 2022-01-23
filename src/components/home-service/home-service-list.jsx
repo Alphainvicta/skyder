@@ -1,11 +1,11 @@
 import React from 'react'
 import Hservice from './home-service.jsx'
-import iservice1 from './images/img1.png';
-import iservice2 from './images/img2.png';
-import iservice3 from './images/img3.png';
-import iservice4 from './images/img4.png';
+import iservice1 from '../../images/img1.png';
+import iservice2 from '../../images/img2.png';
+import iservice3 from '../../images/img3.png';
+import iservice4 from '../../images/img4.png';
 
-class List extends React.Component {
+class Homelist extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -48,4 +48,4 @@ class List extends React.Component {
     }
 }
 
-export default List;
+export default Homelist;

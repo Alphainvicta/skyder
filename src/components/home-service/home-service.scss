@@ -8,6 +8,7 @@
   .service-cont {
     height: 736px;
     margin-left: 110px;
+    margin-right: 0px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -38,7 +39,7 @@
       }
     }
 
-    .more-button {
+    .button {
       width: 306px;
     }
   }

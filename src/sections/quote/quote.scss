@@ -1,0 +1,182 @@
+.quote-cont {
+  margin: 137px 210px;
+
+  hr {
+    margin-top: 133px;
+    margin-bottom: 92px;
+    border: 2px solid #000000;
+    background-color: #000000;
+  }
+
+  .step-one {
+    .select-service-cont {
+      .title {
+        margin-bottom: 123px;
+        font-weight: bold;
+        font-size: 55px;
+        line-height: 148%;
+        color: #000000;
+      }
+
+      .services {
+        height: 388px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+
+    .details-cont {
+      .details {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 210%;
+        color: #000000;
+        margin-bottom: 25px;
+      }
+      textarea {
+        width: 100%;
+        height: 220px;
+      }
+    }
+  }
+  .step-two {
+    .quality-cont {
+      .title {
+        margin-bottom: 123px;
+        font-weight: bold;
+        font-size: 55px;
+        line-height: 148%;
+        color: #000000;
+      }
+
+      .cards-cont {
+        height: 840px;
+        display: flex;
+        flex-flow: column wrap;
+
+        .radio-cont {
+          margin-top: 47px;
+          margin-left: 93px;
+        }
+      }
+    }
+  }
+  .step-three {
+    .title {
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 148%;
+      color: #000000;
+      margin-bottom: 128px;
+    }
+
+    .details-cont {
+      margin: 0px 114px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .date-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .date-title {
+          font-weight: bold;
+          font-size: 33px;
+          line-height: 210%;
+          color: #000000;
+        }
+
+        .textarea-cont {
+          textarea {
+            height: 60px;
+          }
+        }
+      }
+      .location-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .in-zone {
+          font-weight: bold;
+          font-size: 33px;
+          line-height: 210%;
+          color: #000000;
+        }
+
+        .location-options {
+          display: flex;
+          flex-direction: row;
+          gap: 80px;
+
+          .radio-cont {
+            margin-bottom: 0px;
+          }
+        }
+        .location-details {
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 250%;
+          color: #000000;
+        }
+        textarea {
+          width: 380px;
+        }
+      }
+    }
+  }
+  .step-four {
+    .title {
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 148%;
+      color: #000000;
+      margin-bottom: 128px;
+    }
+
+    .contact-cont {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 100px;
+
+      .number {
+        .number-text {
+          font-weight: bold;
+          font-size: 33px;
+          line-height: 210%;
+          color: #000000;
+        }
+      }
+      .email {
+        .email-text {
+          font-weight: bold;
+          font-size: 33px;
+          line-height: 210%;
+          color: #000000;
+        }
+      }
+    }
+    .send-cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .send-text {
+        font-weight: bold;
+        font-size: 33px;
+        line-height: 210%;
+        color: #000000;
+        margin-bottom: 50px;
+      }
+      .button-cont {
+        width: 300px;
+      }
+    }
+  }
+}

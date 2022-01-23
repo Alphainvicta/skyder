@@ -14,7 +14,7 @@ const Hservice = ({title, description, image, link}) => (
                 <div className='service-description'>
                     {description}
                 </div>
-                <div className='more-button'>
+                <div className='button'>
                     <Link to={link}><Button text={'Request a Quote'} /></Link>
                 </div>
             </div>

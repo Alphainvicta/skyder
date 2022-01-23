@@ -1,12 +1,14 @@
 import React from 'react';
 import './home.scss';
-import List from '../../components/home-service/home-service-list.jsx';
+import Top from '../../hooks/top/top.jsx';
+import Homelist from '../../components/home-service/home-service-list.jsx';
 
 import Lvector from '../../icons/left-vector.png';
 import Rvector from '../../icons/right-vector.png';
 
 const Home = () => (
     <div className='home-cont'>
+        <Top />
         <div className='vector-cont'>
             <img src={Lvector} alt=''/>
             <img src={Rvector} alt=''/>
@@ -19,7 +21,7 @@ const Home = () => (
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. Ut enim ad minim veniam.
             </div>
         </div>
-        <List/>
+        <Homelist/>
     </div>
 );
 

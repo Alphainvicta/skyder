@@ -1,11 +1,14 @@
 import React from 'react';
 import './service.scss';
+import {Link} from 'react-router-dom';
+import Top from '../../hooks/top/top.jsx';
 
 import Dblock from '../../components/description-block/description-block.jsx';
 import Button from '../../components/button/button.jsx';
 
 const Service = ({title, description, image, details, cost, additional}) => (
     <div className="service-cont">
+        <Top />
         <div className='info-cont'>
             <div className='service-title'>
                 {title}
@@ -30,7 +33,9 @@ const Service = ({title, description, image, details, cost, additional}) => (
             <div className='extra-slogan'>
                 Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim
             </div>
-            <Button text='Request a Quote'/>
+            <div className='button'>
+                <Link to='/quote'><Button text='Request a Quote'/></Link>
+            </div>
         </div>
     </div>
 );

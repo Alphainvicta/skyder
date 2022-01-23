@@ -1,11 +1,11 @@
 import React from 'react'
 import Service from './service.jsx'
-import iservice1 from '../../components/home-service/images/img1.png';
-import iservice2 from '../../components/home-service/images/img2.png';
-import iservice3 from '../../components/home-service/images/img3.png';
-import iservice4 from '../../components/home-service/images/img4.png';
+import iservice1 from '../../images/img1.png';
+import iservice2 from '../../images/img2.png';
+import iservice3 from '../../images/img3.png';
+import iservice4 from '../../images/img4.png';
 
-class List2 extends React.Component {
+class Servicelist extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -52,10 +52,6 @@ class List2 extends React.Component {
         }
     }
 
-    componentDidMount() {
-        window.scrollTo(0, 0);
-    }
-
     render() {
         const service = this.state.services.find(service => service.link === window.location.pathname)
         if (service) {
@@ -66,4 +62,4 @@ class List2 extends React.Component {
       }
 }
 
-export default List2;
+export default Servicelist;
