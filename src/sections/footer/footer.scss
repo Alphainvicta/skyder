@@ -22,11 +22,13 @@
   }
 
   .number {
-    opacity: 0.7;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .mail {
-    opacity: 0.7;
+    text-decoration: none;
     margin-right: 110px;
+    color: rgba(255, 255, 255, 0.7);
   }
 }

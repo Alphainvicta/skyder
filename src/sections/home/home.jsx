@@ -3,15 +3,15 @@ import './home.scss';
 import Top from '../../hooks/top/top.jsx';
 import Homelist from '../../components/home-service/home-service-list.jsx';
 
-import Lvector from '../../icons/left-vector.png';
-import Rvector from '../../icons/right-vector.png';
+import { ReactComponent as Lvector } from '../../icons/left-vector.svg';
+import { ReactComponent as Rvector } from '../../icons/right-vector.svg';
 
 const Home = () => (
     <div className='home-cont'>
         <Top />
         <div className='vector-cont'>
-            <img src={Lvector} alt=''/>
-            <img src={Rvector} alt=''/>
+            <Lvector />
+            <Rvector />
         </div>
         <div className='main-screen'>
             <div className='main-title'>

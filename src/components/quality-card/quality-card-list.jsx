@@ -16,7 +16,7 @@ class Qcardlist extends React.Component {
                 detail2: 'Amet  consectetur',
                 detail3: 'Adipiscing elit  sed',
                 detail4: 'Eiusmod  tempor incididunt',
-                radio: 'radio1',
+                radio: 'Basic',
                 id : 0
             },
             {
@@ -26,7 +26,7 @@ class Qcardlist extends React.Component {
                 detail2: 'Amet  consectetur',
                 detail3: 'Adipiscing elit  sed',
                 detail4: 'Eiusmod  tempor incididunt',
-                radio: 'radio2',
+                radio: 'Standard',
                 id : 0
             },
             {
@@ -36,7 +36,7 @@ class Qcardlist extends React.Component {
                 detail2: 'Amet  consectetur',
                 detail3: 'Adipiscing elit  sed',
                 detail4: 'Eiusmod  tempor incididunt',
-                radio: 'radio3',
+                radio: 'Premium',
                 id : 0
             }
             ]
@@ -44,10 +44,10 @@ class Qcardlist extends React.Component {
     }
     render() {
         return (    
-            this.state.cards.map(({ id, ...cardsprops }) => (
+            this.state.cards.map(({ id, radio, ...cardsprops }) => (
                 <>
                     <Qcard key={ id } { ...cardsprops } />
-                    <Radio id={this.state.cards.radio} name='cards-radio' value='Choose package'/>
+                    <Radio id='Choose package' name='cards-radio' value={radio}/>
                 </>
             ))
         )

@@ -4,7 +4,7 @@ import './radio.scss';
 const Radio = ({id, name, value}) => (
     <div className='radio-cont'>
         <input type="radio" id={id} name={name} value={value}/>
-        <label htmlFor={value}>{value}</label>
+        <label htmlFor={value}>{id}</label>
     </div>
 );
 

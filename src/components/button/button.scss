@@ -12,8 +12,15 @@
     line-height: 210%;
     text-align: center;
     color: #ffffff;
+    transition: 1s;
   }
   button:hover {
+    background: #2750b8;
+    border: solid #2750b8;
+    width: 110%;
+    height: 88px;
+    font-size: 28px;
+    transition: 1s;
     cursor: pointer;
   }
 }
