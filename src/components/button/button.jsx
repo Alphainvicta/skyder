@@ -1,10 +1,17 @@
 import './button.scss';
 import React from 'react';
 
-const Button = ({text}) => (
+const Button = ({text}) => {
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0
+        });
+      };
+
+    return(
     <div className='button-cont'>
-        <button>{text}</button>
+        <button onClick={scrollToTop}>{text}</button>
     </div>
-);
+    )}
 
 export default Button

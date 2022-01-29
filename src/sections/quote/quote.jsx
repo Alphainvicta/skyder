@@ -1,19 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './quote.scss';
-import Top from '../../hooks/top/top.jsx';
 
 import { ReactComponent as Calendar } from '../../icons/Calendar.svg';
 import { ReactComponent as Map } from '../../icons/Map.svg';
 
 import Input from '../../components/input/input';
 import Button from '../../components/button/button.jsx';
-import Radio from '../../components/radio/radio.jsx';
-import Checkbox from '../../components/checkbox/checkbox.jsx';
 import Textarea from '../../components/textarea/textarea.jsx';
 import Qcardlist from '../../components/quality-card/quality-card-list.jsx';
 
 export const Quote = () => {
+    const [visible, setVisible] = useState(false);
     const form = useRef();
   
     const sendEmail = (e) => {
@@ -31,20 +29,22 @@ export const Quote = () => {
     return (
     <div className='quote-cont'>
         <form ref={form} onSubmit={sendEmail}>
-            <Top/>
             <div className='step-one'>
                 <div className='select-service-cont'>
                     <div className='title'>
                         Select services
                     </div>
                     <div className='services'>
-                        <Checkbox id='service1' name='services' value='service1'/>
-                        <Checkbox id='service2' name='services' value='service2'/>
-                        <Checkbox id='service3' name='services' value='service3'/>
-                        <Checkbox id='service4' name='services' value='service4'/>
-                        <Checkbox id='service5' name='services' value='service5'/>
-                        <Checkbox id='service6' name='services' value='service6'/>
-                        <Checkbox id='service7' name='services' value='service7'/>
+                        <Input id='service1' name='services' value='service1' type='checkbox' label='Service 1'/>
+                        <Input id='service2' name='services' value='service2' type='checkbox' label='Service 2'/>
+                        <Input id='service3' name='services' value='service3' type='checkbox' label='Service 3'/>
+                        <div className='input-cont'>
+                            <input onClick={() => setVisible(!visible)} id='service4' name='services' value='service4' type="checkbox"/>
+                            <label>Service 4</label>
+                        </div>
+                        <Input id='service5' name='services' value='service5' type='checkbox' label='Service 5'/>
+                        <Input id='service6' name='services' value='service6' type='checkbox' label='Service 6'/>
+                        <Input id='service7' name='services' value='service7' type='checkbox' label='Service 7'/>
                     </div>
                 </div>
                 <div className='details-cont'>
@@ -55,17 +55,21 @@ export const Quote = () => {
                 </div>
             </div>
             <hr/>
-            <div className='step-two'>
-                <div className='quality-cont'>
-                    <div className='title'>
-                        Output Quality
-                    </div>
-                    <div className='cards-cont'>
-                        <Qcardlist />
+            {visible && 
+                <>
+                <div className='step-two'>
+                    <div className='quality-cont'>
+                        <div className='title'>
+                            Output Quality
+                        </div>
+                        <div className='cards-cont'>
+                            <Qcardlist />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr/>
+                <hr/>
+                </>
+            }
             <div className='step-three'>
                 <div className='title'>
                     Operation Details
@@ -84,8 +88,8 @@ export const Quote = () => {
                             within metro area?
                         </div>
                         <div className='location-options'>
-                            <Radio id='yes' name='location' value='yes'/>
-                            <Radio id='no' name='location' value='no'/>
+                            <Input id='yes' name='location' value='yes' type='radio' label='Yes' />
+                            <Input id='no' name='location' value='no' type='radio' label='No' />
                         </div>
                         <div className='location-details'>
                             Extra details
@@ -117,7 +121,7 @@ export const Quote = () => {
                     <div className='send-text'>
                         I want to contact an Executive
                     </div>
-                    <Button text='submit'/>
+                    <Button text='Submit'/>
                 </div>
             </div>
         </form>

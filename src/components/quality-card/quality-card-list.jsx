@@ -1,6 +1,6 @@
 import React from 'react';
 import Qcard from './quality-card.jsx';
-import Radio from '../radio/radio.jsx';
+import Input from '../input/input.jsx';
 import video1 from '../../videos/simple.mkv';
 import video2 from '../../videos/standard.mkv';
 import video3 from '../../videos/special.mkv';
@@ -47,7 +47,7 @@ class Qcardlist extends React.Component {
             this.state.cards.map(({ id, radio, ...cardsprops }) => (
                 <>
                     <Qcard key={ id } { ...cardsprops } />
-                    <Radio id='Choose package' name='cards-radio' value={radio}/>
+                    <Input id={radio} name='cards-radio' value={radio} type='radio' label='Choose package'/>
                 </>
             ))
         )

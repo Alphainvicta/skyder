@@ -1,5 +1,5 @@
-import './app.scss';
-import { Routes, Route } from "react-router-dom";
+import'./app.scss';
+import { Routes, Route, useLocation } from "react-router-dom";
 import Nav from './sections/nav/nav.jsx';
 import Footer from './sections/footer/footer.jsx';
 
@@ -8,12 +8,14 @@ import Servicelist from './sections/service/service-list.jsx';
 import Quote from './sections/quote/quote.jsx';
 
 function App() {
+  const pathname = useLocation();
+
   return (
     <div className="App">
       <Nav/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services/:service" element={<Servicelist />} />
+        <Route path="/services/:service" element={<Servicelist path={pathname}/>} />
         <Route path="/quote" element={<Quote />} />
       </Routes>
       <Footer/>

@@ -5,7 +5,8 @@ import iservice2 from '../../images/img2.png';
 import iservice3 from '../../images/img3.png';
 import iservice4 from '../../images/img4.png';
 
-class Servicelist extends React.Component {
+
+class Servicelist extends React.Component{
     constructor() {
         super();
         this.state = {
@@ -53,12 +54,14 @@ class Servicelist extends React.Component {
     }
 
     render() {
-        const service = this.state.services.find(service => service.link === window.location.pathname)
+        console.log(this.props.path.pathname)
+        const service = this.state.services.find(service => service.link === this.props.path.pathname)
         if (service) {
-          return <Service {...service} />
+            return <Service {...service} />
         }
-      
-        return <p>Not Found</p>
+        else{
+            return null
+        }
       }
 }
 
