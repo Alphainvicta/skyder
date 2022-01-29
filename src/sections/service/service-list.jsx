@@ -54,8 +54,8 @@ class Servicelist extends React.Component{
     }
 
     render() {
-        console.log(this.props.path.pathname)
-        const service = this.state.services.find(service => service.link === this.props.path.pathname)
+        const pathname = this.props.path.pathname
+        const service = this.state.services.find(service => service.link === pathname)
         if (service) {
             return <Service {...service} />
         }
