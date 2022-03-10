@@ -26,13 +26,13 @@ const Service = ({title, description, image, details, cost, additional}) => (
         <hr/>
         <div className='goquote-cont'>
             <div className='title'>
-                What are you waiting for?
+                Quiero contactar a un ejecutivo
             </div>
             <div className='extra-slogan'>
-                Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim
+                Recibe una cotización personalizada en menos de 24 horas
             </div>
             <div className='button'>
-                <Link to='/quote'><Button text='Request a Quote'/></Link>
+                <Link to='/quote'><Button text='Contáctanos'/></Link>
             </div>
         </div>
     </div>

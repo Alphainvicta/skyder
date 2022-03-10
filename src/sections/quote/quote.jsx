@@ -101,14 +101,14 @@ export const Quote = () => {
             <hr/>
             <div className='step-four'>
                 <div className='title'>
-                    Contact
+                    Contacto
                 </div>
                 <div className='contact-cont'>
                     <div className='number'>
                         <div className='number-text'>
-                            Number
+                            Celular
                         </div>
-                        <Input id='number' name='number' value='Phone number' type='text'/>
+                        <Input id='number' name='number' value='celular' type='text'/>
                     </div>
                     <div className='email'>
                         <div className='email-text'>
@@ -119,9 +119,9 @@ export const Quote = () => {
                 </div>
                 <div className='send-cont'>
                     <div className='send-text'>
-                        I want to contact an Executive
+                        Contactar a un ejecutivo
                     </div>
-                    <Button text='Submit'/>
+                    <Button text='Enviar'/>
                 </div>
             </div>
         </form>

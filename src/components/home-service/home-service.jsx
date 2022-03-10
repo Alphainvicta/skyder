@@ -15,10 +15,10 @@ const Hservice = ({title, description, image, link}) => (
                     {description}
                 </div>
                 <div className='button'>
-                    <Link to={link}><Button text='More information' /></Link>
+                    <Link to={link}><Button text='Más información' /></Link>
                 </div>
                 <div className='button'>
-                    <Link to='/quote'><Button text='Request a quote' /></Link>
+                    <Link to='/quote'><Button text='Contáctanos' /></Link>
                 </div>
             </div>
             <div className='image-cont'>
