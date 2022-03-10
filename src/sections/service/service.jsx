@@ -18,11 +18,11 @@ const Service = ({title, description, image, details, cost, additional}) => (
                 <img src={image} alt=''/>
             </div>
         </div>
-        <Dblock title='Service Details' details={details}/>
+        <Dblock title='Enfoque del servicio' details={details}/>
         <hr/>
-        <Dblock title='Estimated Cost' details={cost}/>
+        <Dblock title='Aplicaciones' details={cost}/>
         <hr/>
-        <Dblock title='Additional Info' details={additional}/>
+        <Dblock title='Ideal para' details={additional}/>
         <hr/>
         <div className='goquote-cont'>
             <div className='title'>

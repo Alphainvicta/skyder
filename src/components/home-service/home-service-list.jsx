@@ -1,40 +1,40 @@
 import React from 'react'
 import Hservice from './home-service.jsx'
-import iservice1 from '../../images/img1.png';
-import iservice2 from '../../images/img2.png';
-import iservice3 from '../../images/img3.png';
-import iservice4 from '../../images/img4.png';
+import iservice1 from '../../images/Levantamiento1.jpg';
+import iservice2 from '../../images/creacion1.jpg';
+import iservice3 from '../../images/empresas1.jpg';
+import iservice4 from '../../images/Eventos1.jpg';
 
 class Homelist extends React.Component {
     constructor() {
         super();
         this.state = {
             services : [{
-                title : 'Brand & Digital',
-                description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                title : 'Levantamiento con Drone',
+                description : '¿Buscas un vistazo aéreo de tu proyecto? Ofrecemos operaciones con Drone a tu medida.',
                 image : iservice1,
-                link : '/services/brand_&_digital',
+                link : '/services/servicio_drone',
                 id : 0
             },
             {
-                title : 'Graphic Design',
-                description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                title : 'Contenido para redes sociales',
+                description : 'Paquetes diseñados para ayudarte a encontrar tu identidad audiovisual y conectar con tus clientes.',
                 image : iservice2,
-                link : '/services/graphic_design',
+                link : '/services/contenido_redes',
                 id : 1
             },
             {
-                title : 'Advertising',
-                description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                title : 'Vídeo para Empresas',
+                description : 'Soluciones de vídeo profesional a la medida, que capturan el mensaje de tu organización.',
                 image : iservice3,
-                link : '/services/advertising',
+                link : '/services/video_empresas',
                 id : 2
             },
             {
-                title : 'Visual Identity',
-                description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                title : 'Cobertura de eventos',
+                description : 'La mejor experiencia de tu evento en foto y vídeo. Comparte tus memorias con un mayor público potencial.',
                 image : iservice4,
-                link : '/services/visual_identity',
+                link : '/services/cobertura_eventos',
                 id : 3
             }]
         }
