@@ -27,10 +27,10 @@ const Nav = () => {
                 <Link to="/"> Home </Link>
             </div>
             <div className='services-links'>
-                <Link to="/services/brand_&_digital"> Brand & Digital </Link>
-                <Link to="/services/graphic_design"> Graphic Design </Link>
-                <Link to="/services/advertising"> Advertising </Link>
-                <Link to="/services/visual_identity"> Visual Identity </Link>
+                <Link to="/services/servicio_drone"> Levantamiento Drone </Link>
+                <Link to="/services/contenido_redes"> Contenido para redes </Link>
+                <Link to="/services/video_empresas"> Vídeo para empresas </Link>
+                <Link to="/services/cobertura_eventos"> Cobertura de eventos </Link>
             </div>
             <div className='quote-link'>
                 <Link to="/quote"> Quote </Link>
