@@ -18,7 +18,7 @@ class Servicelist extends React.Component{
                 cost: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 additional: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 link : '/services/brand_&_digital',
-                id : 0
+                id : 'service-1'
             },
             {
                 title : 'Graphic Design',
@@ -28,7 +28,7 @@ class Servicelist extends React.Component{
                 cost: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 additional: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 link : '/services/graphic_design',
-                id : 1
+                id : 'service-2'
             },
             {
                 title : 'Advertising',
@@ -38,7 +38,7 @@ class Servicelist extends React.Component{
                 cost: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 additional: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 link : '/services/advertising',
-                id : 2
+                id : 'service-3'
             },
             {
                 title : 'Visual Identity',
@@ -48,7 +48,7 @@ class Servicelist extends React.Component{
                 cost: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 additional: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 link : '/services/visual_identity',
-                id : 3
+                id : 'service-4'
             }]
         }
     }

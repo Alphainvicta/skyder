@@ -14,28 +14,28 @@ class Homelist extends React.Component {
                 description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 image : iservice1,
                 link : '/services/brand_&_digital',
-                id : 0
+                id : 'home-service-1'
             },
             {
                 title : 'Graphic Design',
                 description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 image : iservice2,
                 link : '/services/graphic_design',
-                id : 1
+                id : 'home-service-2'
             },
             {
                 title : 'Advertising',
                 description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 image : iservice3,
                 link : '/services/advertising',
-                id : 2
+                id : 'home-service-3'
             },
             {
                 title : 'Visual Identity',
                 description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                 image : iservice4,
                 link : '/services/visual_identity',
-                id : 3
+                id : 'home-service-4'
             }]
         }
     }

@@ -17,7 +17,7 @@ class Qcardlist extends React.Component {
                 detail3: 'Adipiscing elit  sed',
                 detail4: 'Eiusmod  tempor incididunt',
                 radio: 'Basic',
-                id : 0
+                id : 'q-card-1'
             },
             {
                 title : 'STANDARD',
@@ -27,7 +27,7 @@ class Qcardlist extends React.Component {
                 detail3: 'Adipiscing elit  sed',
                 detail4: 'Eiusmod  tempor incididunt',
                 radio: 'Standard',
-                id : 0
+                id : 'q-card-2'
             },
             {
                 title : 'PREMIUM',
@@ -37,7 +37,7 @@ class Qcardlist extends React.Component {
                 detail3: 'Adipiscing elit  sed',
                 detail4: 'Eiusmod  tempor incididunt',
                 radio: 'Premium',
-                id : 0
+                id : 'q-card-3'
             }
             ]
         }
