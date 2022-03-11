@@ -108,7 +108,7 @@ export const Quote = () => {
                         <div className='number-text'>
                             Celular
                         </div>
-                        <Input id='number' name='number' value='celular' type='text'/>
+                        <Input id='number' name='number' value='Celular' type='text'/>
                     </div>
                     <div className='email'>
                         <div className='email-text'>

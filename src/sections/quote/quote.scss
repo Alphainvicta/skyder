@@ -2,6 +2,7 @@
   margin: 137px 210px;
 
   hr {
+    display: none;
     margin-top: 133px;
     margin-bottom: 92px;
     border: 2px solid #000000;
@@ -9,6 +10,7 @@
   }
 
   .step-one {
+    display: none;
     .select-service-cont {
       .title {
         margin-bottom: 123px;
@@ -46,6 +48,7 @@
     }
   }
   .step-two {
+    display: none;
     .quality-cont {
       .title {
         margin-bottom: 123px;
@@ -68,6 +71,7 @@
     }
   }
   .step-three {
+    display: none;
     .title {
       font-weight: bold;
       font-size: 55px;

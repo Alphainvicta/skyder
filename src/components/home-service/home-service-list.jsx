@@ -25,7 +25,7 @@ class Homelist extends React.Component {
             },
             {
                 title : 'Vídeo para Empresas',
-                description : 'Soluciones de vídeo profesional a la medida, que capturan el mensaje de tu organización.',
+                description : 'Soluciones de vídeo profesional a la medida que capturan el mensaje de tu organización.',
                 image : iservice3,
                 link : '/services/video_empresas',
                 id : 2
