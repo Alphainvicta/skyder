@@ -33,7 +33,7 @@ const Nav = () => {
                 <Link to="/services/cobertura_eventos"> Cobertura de eventos </Link>
             </div>
             <div className='quote-link'>
-                <Link to="/quote"> Quote </Link>
+                <Link to="/quote"> Contacto </Link>
             </div>
             <div className='burguer'>
                 <button onClick={() => setVisible(false)}><Bclose/></button>
