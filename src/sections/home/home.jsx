@@ -13,10 +13,10 @@ const Home = () => (
         </div>
         <div className='main-screen'>
             <div className='main-title'>
-            Drone <span>Studio </span> <br/>& soluciones
+            Drone <span>Studio </span> <br/>& operations
             </div>
             <div className='main-slogan'>
-            Servicios especializados con drones para todas las industrias, <br/> inmobiliarias, sociales, técnicas y más
+            Identidad audiovisual + servicios con drone para todas las indsutrias, <br/> técnica, creativa y más.
             </div>
         </div>
         <Homelist/>
