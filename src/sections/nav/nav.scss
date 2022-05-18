@@ -1,114 +1,113 @@
-.nav-cont {
-  height: 200px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-
-  .logo-icon {
-    margin-left: 110px;
-    flex-grow: 2;
-  }
-
-  .burguer {
-    margin-right: 110px;
-    margin-left: 50px;
-    button {
-      border: none;
-      cursor: pointer;
-    }
-    path {
-      transition: 1s;
-    }
-  }
-
-  .burguer:hover {
-    path {
-      stroke: #396ded;
-    }
-  }
-
-  .burgernav-cont {
-    position: absolute;
-    width: 100%;
+.nav{
+  .nav-cont {
     height: 200px;
-    background-color: #f0f0f0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
-
-    .Home-link {
+  
+    .logo-icon {
       margin-left: 110px;
-      margin-right: 50px;
-
-      a {
-        text-decoration: none;
-        font-style: unset;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 210%;
-        color: #000000;
-        transition: 1s;
-      }
-
-      a:hover {
-        font-size: 26px;
-      }
-    }
-
-    .services-links {
       flex-grow: 2;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-
-      a {
-        text-decoration: none;
-        font-style: unset;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 210%;
-        color: #000000;
-        transition: 1s;
-      }
-
-      a:hover {
-        font-size: 26px;
-      }
     }
-
-    .quote-link {
-      margin-left: 50px;
-
-      a {
-        text-decoration: none;
-        font-style: unset;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 210%;
-        color: #000000;
-        transition: 1s;
-      }
-
-      a:hover {
-        font-size: 26px;
-      }
-    }
-
+  
     .burguer {
-      margin-right: 100px;
+      margin-right: 110px;
       margin-left: 50px;
       button {
         border: none;
         cursor: pointer;
-        background-color: #f0f0f0;
       }
     }
+  }
+  
+  .burgernav-cont {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    justify-content: start;
+    flex-flow: column;
+    gap: 50px;
+  
+    .top-cont{
+      height: 200px;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
 
-    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+      .logo-icon {
+        margin-left: 110px;
+        flex-grow: 2;
+      }
+
+      .bclose{
+        margin-right: 110px;
+        margin-left: 50px;
+
+        button{
+          background-color: black;
+          border: none;
+          cursor: pointer;
+        }
+
+        path{
+          stroke: white;
+        }
+      }
+
+      path{
+        fill: white;
+      }
+    }
+  
+    .bottom-cont{
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-left: 70px;
+      margin-right: 110px;
+      gap: 10px;
+
+      p{
+        margin: 0px;
+        padding-left: 40px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 170%;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .services-links{
+        padding-left: 40px;
+        margin-left: 40px;
+      }
+
+      a{
+        padding-left: 40px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 170%;
+        text-transform: uppercase;
+        color: white;
+        transition: 0.8s;
+      }
+
+      a:hover{
+        background-color: rgba($color: white, $alpha: 0.1);
+        margin-left: 105px;
+        color: #396ded;
+      }
+    }
   }
 }
