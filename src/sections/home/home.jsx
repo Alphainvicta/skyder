@@ -8,8 +8,8 @@ import { ReactComponent as Rvector } from '../../icons/right-vector.svg';
 const Home = () => (
     <div className='home-cont'>
         <div className='vector-cont'>
-            <Lvector />
-            <Rvector />
+            <div className='lvector'><Lvector /></div>
+            <div className='rvector'><Rvector /></div>
         </div>
         <div className='main-screen'>
             <div className='main-title'>

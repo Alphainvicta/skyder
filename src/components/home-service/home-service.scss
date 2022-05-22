@@ -45,3 +45,51 @@
     }
   }
 }
+//
+//Phone display############################################################
+//
+@media only screen and (max-width: 800px) {
+  .hservice-cont {
+    hr {
+      margin: 58px 16px;
+      border: 1.5px solid #000000;
+    }
+  
+    .service-cont {
+      height: auto;
+      margin-left: 16px;
+      margin-right: 16px;
+      flex-direction: column-reverse;
+  
+      .service-title {
+        margin-bottom: 13px;
+        font-size: 25px;
+        text-align: center;
+      }
+  
+      .service-description {
+        margin-bottom: 102px;
+        width: auto;
+        font-size: 18px;
+        text-align: center;
+      }
+  
+      .image-cont {
+        align-self: center;
+  
+        img {
+          width: 358px;
+          height: 209px;
+        }
+      }
+  
+      .button {
+        width: auto;
+        margin-bottom: 20px;
+        button{
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

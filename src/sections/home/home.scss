@@ -1,22 +1,21 @@
 .home-cont {
   .vector-cont {
-    top: 156px;
-    width: 100%;
-    position: absolute;
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
+    align-items: baseline;
+    position: absolute;
+    width: 100%;
+    top: 100px
   }
 
   .main-screen {
-    margin-top: 179px;
-    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 52px;
 
     .main-title {
+      margin-top: 179px;
       font-weight: bold;
       font-size: 95px;
       line-height: 148%;
@@ -29,12 +28,52 @@
     }
 
     .main-slogan {
+      margin-bottom: 179px;
       font-weight: 500;
       font-size: 24px;
       line-height: 210%;
       text-align: center;
       color: #000000;
       opacity: 0.7;
+    }
+  }
+}
+//
+//Phone display############################################################
+//
+@media only screen and (max-width: 800px) {
+  .home-cont {
+    .vector-cont {
+      top: 110px;
+      .lvector{
+        svg{
+          width: 79.1px;
+          height: 185.7px;
+        }
+      }
+      .rvector{
+        svg{
+          width: 107.4px;
+          height: 230.8px;
+        }
+      }
+    }
+  
+    .main-screen {
+      gap: 50px;
+      margin-left: 16px;
+      margin-right: 16px;
+  
+      .main-title {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        font-size: 35px;
+      }
+  
+      .main-slogan {
+        margin-bottom: 80px;
+        font-size: 20px;
+      }
     }
   }
 }
