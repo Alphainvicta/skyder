@@ -25,7 +25,7 @@
 //
 //Phone display############################################################
 //
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .description-cont {
     margin: 16px;
     margin-top: 50px;
@@ -35,12 +35,12 @@
   
     .title {
       font-size: 30px;
-      align-self: flex-start;
+      align-self: center;
     }
   
     .details {
       width: auto;
-      align-self: flex-start;
+      text-align: center;
       font-size: 18px;
     }
   }
