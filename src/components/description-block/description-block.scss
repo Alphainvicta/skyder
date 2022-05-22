@@ -22,3 +22,26 @@
     color: #000000;
   }
 }
+//
+//Phone display############################################################
+//
+@media only screen and (max-width: 800px) {
+  .description-cont {
+    margin: 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    gap: 20px;
+  
+    .title {
+      font-size: 30px;
+      align-self: flex-start;
+    }
+  
+    .details {
+      width: auto;
+      align-self: flex-start;
+      font-size: 18px;
+    }
+  }
+}

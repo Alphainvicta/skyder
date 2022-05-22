@@ -66,3 +66,62 @@
     }
   }
 }
+//
+//Phone display############################################################
+//
+@media only screen and (max-width: 800px) {
+  .service-cont {
+    margin: 16px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  
+    hr {
+      margin: 58px 16px;
+      border: 1.5px solid #000000;
+    }
+  
+    .info-cont {
+      .service-title {
+        
+        margin-bottom: 30px;
+        font-size: 30px;
+      }
+  
+      .service-description {
+        margin-bottom: 50px;
+        font-size: 40px;
+        text-align: left;
+      }
+
+      .image-cont{
+        img{
+          width: 358px;
+          height: 209px;
+        }
+      }
+    }
+  
+    .goquote-cont {
+      margin-top: 50px;
+      margin-bottom: 0px;
+  
+      .title {
+        margin-bottom: 23px;
+        font-size: 30px;
+      }
+  
+      .extra-slogan {
+        margin-bottom: 30px;
+        width: auto;
+        font-size: 22px;
+      }
+  
+      .button {
+        width: 206px;
+        button{
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
