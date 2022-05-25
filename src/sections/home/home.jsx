@@ -16,7 +16,7 @@ const Home = () => (
             Drone <span>Studio </span> <br/>& operations
             </div>
             <div className='main-slogan'>
-            Identidad audiovisual + servicios con drone para todas las indsutrias, <br/> técnica, creativa y más.
+            Identidad audiovisual + servicios con drone para todas las industrias, <br/> técnica, creativa y más.
             </div>
         </div>
         <Homelist/>
