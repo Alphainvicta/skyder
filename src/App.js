@@ -15,7 +15,7 @@ function App() {
       <Nav/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services/:service" element={<Servicelist path={pathname}/>} />
+        <Route path="/services/:service" element={<Servicelist path={pathname.pathname}/>} />
         <Route path="/quote" element={<Quote />} />
       </Routes>
       <Footer/>
