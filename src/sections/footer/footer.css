@@ -1,0 +1,24 @@
+.footer-cont {
+  display: flex;
+  height: 16rem;
+  font-size: 2.4rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 11rem;
+  background-color: black;
+  color: white;
+
+  .side_a {
+    flex-grow: 1;
+  }
+
+  .side_b {
+    display: flex;
+    gap: 4rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

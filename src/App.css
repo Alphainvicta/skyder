@@ -1,34 +1,11 @@
-.container {
-  display: flex;
-  justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;500&display=swap");
 
-  .simongrid {
-    display: grid;
-    grid-template: 100px 100px / 100px 100px;
-    .gg {
-      height: 100px;
-      width: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 30px;
-    }
+.App {
+  width: 192rem;
+  margin: auto;
+}
 
-    .gg.x1 {
-      background-color: blue;
-    }
-
-    .gg.x2 {
-      background-color: red;
-    }
-
-    .gg.x3 {
-      background-color: green;
-    }
-
-    .gg.x4 {
-      background-color: yellow;
-    }
-  }
+body {
+  font-family: "Manrope";
+  overflow-x: hidden;
 }
