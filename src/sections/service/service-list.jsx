@@ -28,34 +28,34 @@ class Servicelist extends React.Component {
           ),
           cost: (
             <div>
-              Supervisión de obra
+              <li>Supervisión de obra</li>
               <br />
-              Supervisión de instalación
+              <li>Supervisión de instalación</li>
               <br />
-              Vista panorámica
+              <li>Vista panorámica</li>
               <br />
-              Inspección de terrenos
+              <li>Inspección de terrenos</li>
               <br />
-              Fotografía cartográfica
+              <li>Fotografía cartográfica</li>
               <br />
-              Vuelo en fábricas/naves/almacenes.
+              <li>Vuelo en fábricas/naves/almacenes</li>
             </div>
           ),
           additional: (
             <div>
-              Instalaciones industriales
+              <li>Instalaciones industriales</li>
               <br />
-              Fábricas en interior y exterior
+              <li>Fábricas en interior y exterior</li>
               <br />
-              Construcciones y desarrollos
+              <li>Construcciones y desarrollos</li>
               <br />
-              Bodegas
+              <li>Bodegas</li>
               <br />
-              Páneles solares
+              <li>Páneles solares</li>
               <br />
-              Excavaciones
+              <li>Excavaciones</li>
               <br />
-              Terrenos y alrededores
+              <li>Terrenos y alrededores</li>
             </div>
           ),
           link: "/services/servicio_drone",
@@ -81,36 +81,36 @@ class Servicelist extends React.Component {
           ),
           cost: (
             <div>
-              Reels para Instagram/Tiktok
+              <li>Reels para Instagram/Tiktok</li>
               <br />
-              Foto y vídeo de producto
+              <li>Foto y vídeo de producto</li>
               <br />
-              Foto y vídeo de catálogo
+              <li>Foto y vídeo de catálogo</li>
               <br />
-              Foto y vídeo experiencia de servicio
+              <li>Foto y vídeo experiencia de servicio</li>
               <br />
-              Reviews y tutoriales
+              <li>Reviews y tutoriales</li>
               <br />
-              Video respuestas a preguntas frecuentes
+              <li>Video respuestas a preguntas frecuentes</li>
               <br />
-              Making process de tu producto
+              <li>Making process de tu producto</li>
             </div>
           ),
           additional: (
             <div>
-              Restaurantes y bares
+              <li>Restaurantes y bares</li>
               <br />
-              Boutiques
+              <li>Boutiques</li>
               <br />
-              Bazares
+              <li>Bazares</li>
               <br />
-              Academias
+              <li>Academias</li>
               <br />
-              Gimnasios
+              <li>Gimnasios</li>
               <br />
-              Hoteles y spas
+              <li>Hoteles y spas</li>
               <br />
-              Casinos
+              <li>Casinos</li>
               <br />
               <br />
               Sabemos que si no está en internet, no existe(s).
@@ -142,25 +142,25 @@ class Servicelist extends React.Component {
           ),
           cost: (
             <div>
-              Vídeo institucional
+              <li>Vídeo institucional</li>
               <br />
-              Mensaje directivo
+              <li> Mensaje directivo</li>
               <br />
-              Foto y vídeo conmemorativo
+              <li>Foto y vídeo conmemorativo</li>
               <br />
-              Simulacros
+              <li>Simulacros</li>
               <br />
-              Tour de proceso
+              <li>Tour de proceso</li>
               <br />
-              Tutoriales y demostraciones
+              <li>Tutoriales y demostraciones</li>
               <br />
-              Avances de implementación
+              <li>Avances de implementación</li>
               <br />
-              Reportes en vídeo
+              <li>Reportes en vídeo</li>
               <br />
-              Material de comunicación interna
+              <li>Material de comunicación interna</li>
               <br />
-              Video-manual de seguridad
+              <li>Video-manual de seguridad</li>
             </div>
           ),
           additional: (
@@ -168,13 +168,13 @@ class Servicelist extends React.Component {
               Hemos sido aliados de la comunicación efectiva para:
               <br />
               <br />
-              Sector industrial
+              <li>Sector industrial</li>
               <br />
-              Universidades y escuelas
+              <li>Universidades y escuelas</li>
               <br />
-              Conferencias y ponencias
+              <li>Conferencias y ponencias</li>
               <br />
-              Expos
+              <li>Expos</li>
             </div>
           ),
           link: "/services/video_empresas",
@@ -205,52 +205,52 @@ class Servicelist extends React.Component {
           ),
           cost: (
             <div>
-              Conciertos y live sessions
+              <li>Conciertos y live sessions</li>
               <br />
-              Inauguraciones y clausuras
+              <li>Inauguraciones y clausuras</li>
               <br />
-              Presentaciones de producto
+              <li>Presentaciones de producto</li>
               <br />
-              Cocktails
+              <li>Cocktails</li>
               <br />
-              Sex reveal y sociales
+              <li>Sex reveal y sociales</li>
               <br />
-              Ferias y Bazares
+              <li>Ferias y Bazares</li>
               <br />
-              Eventos escolares
+              <li>Eventos escolares</li>
               <br />
-              Eventos empresariales
+              <li>Eventos empresariales</li>
               <br />
-              Partidos y maratones
+              <li>Partidos y maratones</li>
               <br />
-              Torneos y dinámicas
+              <li>Torneos y dinámicas</li>
               <br />
-              Premiaciones y ceremonias
+              <li>Premiaciones y ceremonias</li>
               <br />
-              Marchas y desfiles
+              <li>Marchas y desfiles</li>
               <br />
-              Pirotecnia y shows
+              <li>Pirotecnia y shows</li>
             </div>
           ),
           additional: (
             <div>
-              Estadios
+              <li>Estadios</li>
               <br />
-              Escuelas
+              <li>Escuelas</li>
               <br />
-              Ligas deportivas
+              <li>Ligas deportivas</li>
               <br />
-              Salones de fiestas
+              <li>Salones de fiestas</li>
               <br />
-              Hoteles y Expos
+              <li>Hoteles y Expos</li>
               <br />
-              Planners
+              <li>Planners</li>
               <br />
-              Agencias de marketing
+              <li>Agencias de marketing</li>
               <br />
-              Centros comerciales
+              <li>Centros comerciales</li>
               <br />
-              Espacios públicos
+              <li>Espacios públicos</li>
             </div>
           ),
           link: "/services/cobertura_eventos",

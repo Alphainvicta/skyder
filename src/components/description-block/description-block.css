@@ -1,0 +1,18 @@
+.description_cont {
+  .description_text {
+    padding: 10rem 8rem;
+    display: flex;
+    align-items: center;
+    gap: 30rem;
+    .title {
+      width: 40rem;
+      font-size: 3.8rem;
+      font-weight: bold;
+    }
+    .details {
+      width: 82rem;
+      font-size: 2.4rem;
+      opacity: 70%;
+    }
+  }
+}

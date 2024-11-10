@@ -1,0 +1,9 @@
+.button_cont {
+  button {
+    height: 8rem;
+    padding: 0rem 5rem;
+    font-size: 2.4rem;
+    color: white;
+    background-color: #396ded;
+  }
+}

@@ -8,13 +8,22 @@ import { ReactComponent as Instagram } from "../../icons/bxl-instagram-alt.svg";
 
 const Nav = () => {
   const [isVisible, setVisible] = useState(false);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+  const clickEvent = (visibility) => {
+    scrollToTop();
+    setVisible(visibility);
+  };
 
   return (
     <nav>
       <div className={`${isVisible ? "" : "not_"}visible`}>
         <div className="notVisible_nav">
           <div className="side_a">
-            <Link to={"/"} onClick={() => setVisible(false)}>
+            <Link to={"/"} onClick={() => clickEvent(false)}>
               <Logo />
             </Link>
           </div>
@@ -36,7 +45,7 @@ const Nav = () => {
                 <Behance />
               </a>
             </div>
-            <button onClick={() => setVisible(!isVisible)}>
+            <button onClick={() => clickEvent(!isVisible)}>
               <span className="bar1" />
               <span className="bar2" />
             </button>
@@ -47,7 +56,7 @@ const Nav = () => {
             <Link
               className="nav_links nl1"
               to="/"
-              onClick={() => setVisible(!isVisible)}
+              onClick={() => clickEvent(!isVisible)}
             >
               INICIO
             </Link>
@@ -55,35 +64,35 @@ const Nav = () => {
             <Link
               className="nav_links service nl2"
               to="/services/servicio_drone"
-              onClick={() => setVisible(!isVisible)}
+              onClick={() => clickEvent(!isVisible)}
             >
               LEVANTAMIENTO DRONE
             </Link>
             <Link
               className="nav_links service nl3"
               to="/services/contenido_redes"
-              onClick={() => setVisible(!isVisible)}
+              onClick={() => clickEvent(!isVisible)}
             >
               CONTENIDO PARA REDES
             </Link>
             <Link
               className="nav_links service nl4"
               to="/services/video_empresas"
-              onClick={() => setVisible(!isVisible)}
+              onClick={() => clickEvent(!isVisible)}
             >
               VÍDEO PARA EMPRESAS
             </Link>
             <Link
               className="nav_links service nl5"
               to="/services/cobertura_eventos"
-              onClick={() => setVisible(!isVisible)}
+              onClick={() => clickEvent(!isVisible)}
             >
               COVERTURA DE EVENTOS
             </Link>
             <Link
               className="nav_links nl6"
               to="/quote"
-              onClick={() => setVisible(!isVisible)}
+              onClick={() => clickEvent(!isVisible)}
             >
               COTIZACIONES
             </Link>

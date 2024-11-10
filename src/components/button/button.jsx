@@ -9,7 +9,7 @@ const Button = ({ text }) => {
   };
 
   return (
-    <div className="button-cont">
+    <div className="button_cont">
       <button onClick={scrollToTop}>{text}</button>
     </div>
   );
