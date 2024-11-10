@@ -1,0 +1,44 @@
+.step2_cont {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  .block_a {
+    display: flex;
+    justify-content: space-between;
+    font-size: 5.5rem;
+    font-weight: bold;
+  }
+
+  .block_b {
+    display: flex;
+    justify-content: space-evenly;
+
+    .calendar_cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    .map_cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    p {
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+  }
+
+  .buttons_container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

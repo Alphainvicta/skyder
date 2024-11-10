@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./quote.css";
 
-import { ReactComponent as Calendar } from "../../icons/Calendar.svg";
-import { ReactComponent as Map } from "../../icons/Map.svg";
-
-import QuoteStep1 from "./quote-step-1";
+import QuoteStep1 from "./quote-steps/step-1/quote-step-1";
+import QuoteStep2 from "./quote-steps/step-2/quote-step-2";
+import QuoteStep3 from "./quote-steps/step-3/quote-step-3";
 
 export const Quote = () => {
   const [currentStep, stepFollower] = useState(1);
@@ -16,9 +15,13 @@ export const Quote = () => {
           <QuoteStep1 currentStep={currentStep} stepFollower={stepFollower} />
         );
       case 2:
-        return <div>The number is Two</div>;
+        return (
+          <QuoteStep2 currentStep={currentStep} stepFollower={stepFollower} />
+        );
       case 3:
-        return <div>The number is Three</div>;
+        return (
+          <QuoteStep3 currentStep={currentStep} stepFollower={stepFollower} />
+        );
       default:
         return <div>The number is something else!</div>;
     }

@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import "./quote-step-1.css";
 
-import { ReactComponent as Calendar } from "../../icons/Calendar.svg";
-import { ReactComponent as Map } from "../../icons/Map.svg";
-
-import Input from "../../components/input/input";
-import Button from "../../components/button/button.jsx";
-import Qcardlist from "../../components/quality-card/quality-card-list.jsx";
+import Input from "../../../../components/input/input.jsx";
+import Button from "../../../../components/button/button.jsx";
+import Qcardlist from "../../../../components/quality-card/quality-card-list.jsx";
 
 export const QuoteStep1 = ({ currentStep, stepFollower }) => {
   const [valueSlider, setValueSlider] = useState(15);
@@ -134,12 +131,17 @@ export const QuoteStep1 = ({ currentStep, stepFollower }) => {
               id="otroTiempoBox"
               name="otroTiempoBox"
               type="checkbox"
-              label="Otro tiempo"
+              label={selectedServices.otroTiempoBox ? "" : "Otro tiempo"}
               checked={selectedServices.otroTiempoBox}
               onChange={handleCheckboxChange}
             />
             {selectedServices.otroTiempoBox ? (
-              <Input id="otroTiempoText" name="otroTiempoText" type="text" />
+              <Input
+                id="otroTiempoText"
+                name="otroTiempoText"
+                type="text"
+                value="Otro tiempo"
+              />
             ) : (
               ""
             )}
