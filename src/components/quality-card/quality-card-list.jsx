@@ -11,7 +11,7 @@ class Qcardlist extends React.Component {
     this.state = {
       cards: [
         {
-          title: "BASIC",
+          title: "BASICO",
           video: video1,
           detail1: "Lorem ipsum dolor sit",
           detail2: "Amet  consectetur",
@@ -21,7 +21,7 @@ class Qcardlist extends React.Component {
           id: "q-card-1",
         },
         {
-          title: "STANDARD",
+          title: "ESTANDARD",
           video: video2,
           detail1: "Lorem ipsum dolor sit",
           detail2: "Amet  consectetur",
@@ -52,7 +52,7 @@ class Qcardlist extends React.Component {
           name="cards-radio"
           value={radio}
           type="radio"
-          label="Choose package"
+          label="Escoger paquete"
         />
       </>
     ));

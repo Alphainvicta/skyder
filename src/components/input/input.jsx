@@ -2,7 +2,7 @@ import React from "react";
 import "./input.css";
 
 const Input = ({ id, name, value, type, onChange, label }) => (
-  <div className="input-cont">
+  <div className="input_cont">
     <input
       type={type}
       id={id}

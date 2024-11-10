@@ -1,0 +1,48 @@
+.input_cont {
+  display: flex;
+  align-items: center;
+
+  input[type="text"] {
+    background: #f0f0f0;
+    border: 0.3rem solid black;
+    box-sizing: border-box;
+    resize: none;
+
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  input[type="email"] {
+    background: #f0f0f0;
+    border: 0.3rem solid black;
+    box-sizing: border-box;
+    resize: none;
+
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  input[type="checkbox"] {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+  }
+
+  label {
+    margin-left: 3.4rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 210%;
+    color: black;
+  }
+}

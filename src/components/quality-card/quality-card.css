@@ -1,0 +1,28 @@
+.Qcard-cont {
+  width: 47.3rem;
+  height: 68.6rem;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+
+  .title-card {
+    font-weight: bold;
+    font-size: 3.3rem;
+    color: #000000;
+    margin-left: 4.1rem;
+    margin-top: 5.2rem;
+  }
+
+  video {
+    margin-top: 4rem;
+  }
+
+  .details-cont {
+    font-weight: bold;
+    font-size: 2.1rem;
+    line-height: 250%;
+    color: #000000;
+    margin-left: 4.1rem;
+    list-style-image: url(../../icons/checkmark.svg);
+  }
+}

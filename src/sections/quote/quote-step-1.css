@@ -1,0 +1,81 @@
+.step1_cont {
+  padding: 5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  .block_a {
+    display: flex;
+    justify-content: space-between;
+    font-size: 5.5rem;
+    font-weight: bold;
+  }
+
+  .block_b {
+    height: 20rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 3rem;
+  }
+
+  .block_c {
+    padding: 6rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    background-color: white;
+    .title {
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+    .selection {
+      font-size: 2.4rem;
+      opacity: 70%;
+    }
+  }
+
+  .button_container {
+    align-self: flex-end;
+  }
+
+  .service_quality {
+    padding: 5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+
+    .title {
+      font-size: 5.5rem;
+      font-weight: bold;
+    }
+
+    .block_a2 {
+      height: 80rem;
+      display: flex;
+      flex-flow: column wrap;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .block_b2 {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+
+      p {
+        margin: 0rem;
+      }
+
+      input {
+        width: 40rem;
+      }
+    }
+
+    .custom_time {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+}
