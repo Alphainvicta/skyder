@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;500&display=swap");
 
 .App {
-  width: 192rem;
-  margin: auto;
+  padding: 0 11rem;
 }
 
 body {
   font-family: "Manrope";
   overflow-x: hidden;
+  button {
+    border-style: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }

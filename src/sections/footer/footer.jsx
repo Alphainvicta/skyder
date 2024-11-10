@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.css";
 
 const Footer = () => (
-  <div className="footer-cont">
+  <footer>
     <div className="side_a">
       <div className="rights">
         Skyder © 2024 - todos los derechos reservados.
@@ -28,7 +28,7 @@ const Footer = () => (
       </a>
     </div>
     <div className="footer_background" />
-  </div>
+  </footer>
 );
 
 export default Footer;

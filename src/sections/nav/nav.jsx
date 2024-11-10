@@ -5,121 +5,95 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../icons/logo.svg";
 import { ReactComponent as Behance } from "../../icons/behance.svg";
 import { ReactComponent as Instagram } from "../../icons/bxl-instagram-alt.svg";
-import { ReactComponent as Burguer } from "../../icons/burguer.svg";
-import { ReactComponent as Bclose } from "../../icons/burguerclose.svg";
 
 const Nav = () => {
-  const [visible, setVisible] = useState(false);
+  const [isVisible, setVisible] = useState(false);
 
   return (
-    <div className="nav">
-      <div className="nav-cont">
-        <div className="logo-icon">
-          <Link to="/">
-            {" "}
-            <Logo />{" "}
-          </Link>
-        </div>
-        <a
-          className="instagram"
-          href="https://www.instagram.com/skydergdl/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Instagram />
-        </a>
-        <a
-          className="behance"
-          href="https://www.behance.net/skyder"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Behance />
-        </a>
-        <div className="burguer">
-          <button onClick={() => setVisible(true)}>
-            <Burguer />
-          </button>
-        </div>
-      </div>
-      {visible && (
-        <div className="burgernav-cont">
-          <div className="top-cont">
-            <div className="logo-icon">
-              <Link to="/" onClick={() => setVisible(false)}>
-                {" "}
-                <Logo />{" "}
-              </Link>
-            </div>
-            <a
-              className="instagram"
-              href="https://www.instagram.com/skydergdl/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Instagram />
-            </a>
-            <a
-              className="behance"
-              href="https://www.behance.net/skyder"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Behance />
-            </a>
-            <div className="bclose">
-              <button onClick={() => setVisible(false)}>
-                <Bclose />
-              </button>
-            </div>
-          </div>
-
-          <div className="bottom-cont">
-            <Link to="/" onClick={() => setVisible(false)}>
-              {" "}
-              inicio{" "}
+    <nav>
+      <div className={`${isVisible ? "" : "not_"}visible`}>
+        <div className="notVisible_nav">
+          <div className="side_a">
+            <Link to={"/"} onClick={() => setVisible(false)}>
+              <Logo />
             </Link>
-            <p>servicios</p>
+          </div>
+          <div className="side_b">
+            <div className="social">
+              {isVisible ? <p>SIGUENOS</p> : isVisible}
+              <a
+                href="https://www.instagram.com/skydergdl/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Instagram />
+              </a>
+              <a
+                href="https://www.behance.net/skyder"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Behance />
+              </a>
+            </div>
+            <button onClick={() => setVisible(!isVisible)}>
+              <span className="bar1" />
+              <span className="bar2" />
+            </button>
+          </div>
+        </div>
+        {isVisible ? (
+          <div className="isVisible_nav">
             <Link
-              className="services-links"
+              className="nav_links nl1"
+              to="/"
+              onClick={() => setVisible(!isVisible)}
+            >
+              INICIO
+            </Link>
+            <p>SERVICIOS</p>
+            <Link
+              className="nav_links service nl2"
               to="/services/servicio_drone"
-              onClick={() => setVisible(false)}
+              onClick={() => setVisible(!isVisible)}
             >
-              {" "}
-              Levantamiento Drone{" "}
+              LEVANTAMIENTO DRONE
             </Link>
             <Link
-              className="services-links"
+              className="nav_links service nl3"
               to="/services/contenido_redes"
-              onClick={() => setVisible(false)}
+              onClick={() => setVisible(!isVisible)}
             >
-              {" "}
-              Contenido para redes{" "}
+              CONTENIDO PARA REDES
             </Link>
             <Link
-              className="services-links"
+              className="nav_links service nl4"
               to="/services/video_empresas"
-              onClick={() => setVisible(false)}
+              onClick={() => setVisible(!isVisible)}
             >
-              {" "}
-              Vídeo para empresas{" "}
+              VÍDEO PARA EMPRESAS
             </Link>
             <Link
-              className="services-links"
+              className="nav_links service nl5"
               to="/services/cobertura_eventos"
-              onClick={() => setVisible(false)}
+              onClick={() => setVisible(!isVisible)}
             >
-              {" "}
-              Cobertura de eventos{" "}
+              COVERTURA DE EVENTOS
             </Link>
-            <Link to="/quote" onClick={() => setVisible(false)}>
-              {" "}
-              Contacto{" "}
+            <Link
+              className="nav_links nl6"
+              to="/quote"
+              onClick={() => setVisible(!isVisible)}
+            >
+              COTIZACIONES
             </Link>
           </div>
-        </div>
-      )}
-    </div>
+        ) : (
+          ""
+        )}
+      </div>
+      {isVisible ? <span className="nav_background" /> : ""}
+    </nav>
   );
 };
 
