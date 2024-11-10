@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import Button from "../button/button.jsx";
 
 const Hservice = ({ title, description, image, link }) => (
-  <div className="hservice-cont">
+  <div className="hservice_cont">
     <hr />
-    <div className="service-cont">
-      <div className="text-cont">
-        <div className="service-title">{title}</div>
-        <div className="service-description">{description}</div>
+    <div className="service_cont">
+      <div className="text_cont">
+        <div className="service_title">{title}</div>
+        <div className="service_description">{description}</div>
         <div className="button">
           <Link to={link}>
             <Button text="Más información" />
@@ -17,11 +17,11 @@ const Hservice = ({ title, description, image, link }) => (
         </div>
         <div className="button">
           <Link to="/quote">
-            <Button text="Contáctanos" />
+            <Button text="Cotiza aquí" />
           </Link>
         </div>
       </div>
-      <div className="image-cont">
+      <div className="image_cont">
         <img src={image} alt="iservice" />
       </div>
     </div>

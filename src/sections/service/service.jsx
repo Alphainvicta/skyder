@@ -24,7 +24,7 @@ const Service = ({ title, description, image, details, cost, additional }) => (
       </div>
       <div className="button">
         <Link to="/quote">
-          <Button text="Cotiza aqui" />
+          <Button text="Cotiza aquí" />
         </Link>
       </div>
     </div>

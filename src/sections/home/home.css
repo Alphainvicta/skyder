@@ -1,0 +1,39 @@
+.home_cont {
+  position: relative;
+  .vector_cont {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .lvector {
+      position: relative;
+      left: -11rem;
+    }
+    .rvector {
+      position: relative;
+      right: -11rem;
+    }
+  }
+
+  .main_screen {
+    padding: 22rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    .main_title {
+      font-size: 9.5rem;
+      font-weight: bold;
+      span {
+        color: #396ded;
+      }
+    }
+    .main_slogan {
+      text-align: center;
+      font-size: 2.4rem;
+      opacity: 70%;
+    }
+  }
+}

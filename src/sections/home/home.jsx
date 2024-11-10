@@ -6,8 +6,8 @@ import { ReactComponent as Lvector } from "../../icons/left-vector.svg";
 import { ReactComponent as Rvector } from "../../icons/right-vector.svg";
 
 const Home = () => (
-  <div className="home-cont">
-    <div className="vector-cont">
+  <div className="home_cont">
+    <div className="vector_cont">
       <div className="lvector">
         <Lvector />
       </div>
@@ -15,11 +15,11 @@ const Home = () => (
         <Rvector />
       </div>
     </div>
-    <div className="main-screen">
-      <div className="main-title">
+    <div className="main_screen">
+      <div className="main_title">
         Drone <span>Studio </span> <br />& operations
       </div>
-      <div className="main-slogan">
+      <div className="main_slogan">
         Identidad audiovisual + servicios con drone para todas las industrias,{" "}
         <br /> técnica, creativa y más.
       </div>

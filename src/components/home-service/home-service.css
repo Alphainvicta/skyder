@@ -1,0 +1,30 @@
+.hservice_cont {
+  display: flex;
+  flex-direction: column;
+  .service_cont {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    .text_cont {
+      width: 70rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+      .service_title {
+        font-size: 3.8rem;
+        font-weight: bold;
+      }
+      .service_description {
+        font-size: 2.4rem;
+        opacity: 70%;
+        text-align: justify;
+      }
+    }
+
+    .image_cont {
+      position: relative;
+      right: -11rem;
+    }
+  }
+}
