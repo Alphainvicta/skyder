@@ -47,7 +47,7 @@ footer {
 
 @media only screen and (max-width: 43rem) {
   footer {
-    height: 10rem;
+    height: 16rem;
     font-size: 1.2rem;
   }
 }

@@ -21,10 +21,10 @@ const Nav = () => {
   return (
     <nav>
       <div className={`${isVisible ? "" : "not_"}visible`}>
-        <div className="notVisible_nav">
+        <div className="top_nav">
           <div className="side_a">
             <Link to={"/"} onClick={() => clickEvent(false)}>
-              <Logo />
+              <Logo viewBox="0 0 210 70" />
             </Link>
           </div>
           <div className="side_b">
@@ -35,14 +35,14 @@ const Nav = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Instagram />
+                <Instagram viewBox="0 0 30 29" />
               </a>
               <a
                 href="https://www.behance.net/skyder"
                 target="_blank"
                 rel="noreferrer"
               >
-                <Behance />
+                <Behance viewBox="0 0 28 32" />
               </a>
             </div>
             <button onClick={() => clickEvent(!isVisible)}>
@@ -52,9 +52,9 @@ const Nav = () => {
           </div>
         </div>
         {isVisible ? (
-          <div className="isVisible_nav">
+          <div className="bottom_nav">
             <Link
-              className="nav_links nl1"
+              className="nav_links"
               to="/"
               onClick={() => clickEvent(!isVisible)}
             >
@@ -62,35 +62,35 @@ const Nav = () => {
             </Link>
             <p>SERVICIOS</p>
             <Link
-              className="nav_links service nl2"
+              className="nav_links service"
               to="/services/servicio_drone"
               onClick={() => clickEvent(!isVisible)}
             >
               LEVANTAMIENTO DRONE
             </Link>
             <Link
-              className="nav_links service nl3"
+              className="nav_links service"
               to="/services/contenido_redes"
               onClick={() => clickEvent(!isVisible)}
             >
               CONTENIDO PARA REDES
             </Link>
             <Link
-              className="nav_links service nl4"
+              className="nav_links service"
               to="/services/video_empresas"
               onClick={() => clickEvent(!isVisible)}
             >
               VÍDEO PARA EMPRESAS
             </Link>
             <Link
-              className="nav_links service nl5"
+              className="nav_links service"
               to="/services/cobertura_eventos"
               onClick={() => clickEvent(!isVisible)}
             >
               COVERTURA DE EVENTOS
             </Link>
             <Link
-              className="nav_links nl6"
+              className="nav_links"
               to="/quote"
               onClick={() => clickEvent(!isVisible)}
             >
