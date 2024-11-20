@@ -6,7 +6,7 @@ import { ReactComponent as Logo } from "../../icons/logo.svg";
 import { ReactComponent as Behance } from "../../icons/behance.svg";
 import { ReactComponent as Instagram } from "../../icons/bxl-instagram-alt.svg";
 
-const Nav = () => {
+const Nav = ({ isMobile }) => {
   const [isVisible, setVisible] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({
@@ -53,7 +53,7 @@ const Nav = () => {
           </div>
         </div>
         {isVisible ? (
-          <div className="bottom_nav">
+          <div className={`${isMobile ? "mobile " : ""}bottom_nav`}>
             <Link
               className="nav_links"
               to="/"
