@@ -10,21 +10,29 @@
     .lvector {
       position: relative;
       left: -11rem;
+      svg {
+        height: clamp(10rem, 20vw, 65rem);
+        width: auto;
+      }
     }
     .rvector {
       position: relative;
       right: -11rem;
+      svg {
+        height: clamp(10rem, 20vw, 80rem);
+        width: auto;
+      }
     }
   }
 
   .main_screen {
-    padding: 22rem 0;
+    padding: clamp(5rem, 8vw, 22rem) 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: clamp(2rem, 3vw, 5rem);
     .main_title {
-      font-size: 9.5rem;
+      font-size: clamp(3rem, calc(6vw + 0.1rem), 9.5rem);
       font-weight: bold;
       span {
         color: #396ded;
@@ -32,7 +40,7 @@
     }
     .main_slogan {
       text-align: center;
-      font-size: 2.4rem;
+      font-size: clamp(1.6rem, calc(2vw + 0.1rem), 2.4rem);
       opacity: 70%;
     }
   }

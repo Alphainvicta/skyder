@@ -29,7 +29,7 @@ export const QuoteStep2 = ({ currentStep, stepFollower }) => {
           className="left_button"
           onClick={() => stepFollower(currentStep - 1)}
         >
-          <Button text="Volver" />
+          <Button text="Volver" shadowSide={false} />
         </div>
         <div
           className="right_button"

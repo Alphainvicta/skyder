@@ -1,7 +1,7 @@
 import "./button.css";
 import React from "react";
 
-const Button = ({ text }) => {
+const Button = ({ text, shadowSide = true }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -10,7 +10,12 @@ const Button = ({ text }) => {
 
   return (
     <div className="button_cont">
-      <button onClick={scrollToTop}>{text}</button>
+      <button
+        onClick={scrollToTop}
+        className={`${shadowSide ? "right" : "left"}`}
+      >
+        {text}
+      </button>
     </div>
   );
 };

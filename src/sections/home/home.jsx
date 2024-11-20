@@ -9,10 +9,10 @@ const Home = () => (
   <div className="home_cont">
     <div className="vector_cont">
       <div className="lvector">
-        <Lvector />
+        <Lvector viewBox="0 0 277 650" />
       </div>
       <div className="rvector">
-        <Rvector />
+        <Rvector viewBox="0 0 376 808" />
       </div>
     </div>
     <div className="main_screen">

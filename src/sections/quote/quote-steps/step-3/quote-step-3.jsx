@@ -46,9 +46,9 @@ export const QuoteStep3 = ({ currentStep, stepFollower }) => {
             />
             <div className="char_count">
               <span>
-                {maxLength - details.length == 0
+                {maxLength - details.length === 0
                   ? "No quedan mas caracteres"
-                  : maxLength - details.length == 1
+                  : maxLength - details.length === 1
                   ? `Caracter restante: ${maxLength - details.length}`
                   : `Caracteres restantes: ${maxLength - details.length}`}
               </span>
@@ -76,7 +76,7 @@ export const QuoteStep3 = ({ currentStep, stepFollower }) => {
           className="left_button"
           onClick={() => stepFollower(currentStep - 1)}
         >
-          <Button text="Volver" />
+          <Button text="Volver" shadowSide={false} />
         </div>
         <div
           className="right_button"
