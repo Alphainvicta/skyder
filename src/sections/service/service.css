@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    text-align: center;
 
     .service_title {
       font-size: 3.8rem;
@@ -14,6 +15,13 @@
     .service_description {
       font-size: 7.5rem;
       font-weight: bold;
+    }
+
+    .image_cont {
+      width: inherit;
+      height: auto;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -30,6 +38,23 @@
     .extra_slogan {
       font-size: 2.4rem;
       opacity: 70%;
+    }
+  }
+}
+
+@media only screen and (max-width: 75rem) {
+}
+
+@media only screen and (max-width: 43rem) {
+  .service_cont {
+    .info_cont {
+      gap: 1rem;
+      .service_title {
+        font-size: 1.6rem;
+      }
+      .service_description {
+        font-size: 3rem;
+      }
     }
   }
 }

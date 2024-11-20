@@ -20,6 +20,7 @@ const Nav = () => {
 
   return (
     <nav>
+      {isVisible ? <span className="nav_background" /> : ""}
       <div className={`${isVisible ? "" : "not_"}visible`}>
         <div className="top_nav">
           <div className="side_a">
@@ -101,7 +102,6 @@ const Nav = () => {
           ""
         )}
       </div>
-      {isVisible ? <span className="nav_background" /> : ""}
     </nav>
   );
 };
