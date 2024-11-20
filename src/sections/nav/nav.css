@@ -135,7 +135,7 @@ nav {
 
       .nav_links {
         transition: 0.8s;
-        animation: nav_links 0.8s linear backwards;
+        animation: nav_links 0.8s ease-in-out backwards;
       }
       .nav_links.service {
         margin-left: clamp(1.5rem, 2vw, 4rem);
