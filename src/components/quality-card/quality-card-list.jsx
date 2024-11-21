@@ -44,16 +44,9 @@ class Qcardlist extends React.Component {
     };
   }
   render() {
-    return this.state.cards.map(({ id, radio, ...cardsprops }) => (
+    return this.state.cards.map(({ id, ...cardsprops }) => (
       <>
         <Qcard key={id} {...cardsprops} />
-        <Input
-          id={radio}
-          name="cards-radio"
-          value={radio}
-          type="radio"
-          label="Escoger paquete"
-        />
       </>
     ));
   }

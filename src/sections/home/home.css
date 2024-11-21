@@ -6,21 +6,22 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    z-index: -1;
 
     .lvector {
       position: relative;
-      left: -11rem;
+      right: clamp(5.5rem, 6vw, 11rem);
+      bottom: 10rem;
       svg {
-        height: clamp(10rem, 20vw, 65rem);
-        width: auto;
+        width: clamp(10rem, 15vw, 30rem);
       }
     }
     .rvector {
       position: relative;
-      right: -11rem;
+      left: clamp(5.5rem, 6vw, 11rem);
+      bottom: 10rem;
       svg {
-        height: clamp(10rem, 20vw, 80rem);
-        width: auto;
+        width: clamp(10rem, 20vw, 35rem);
       }
     }
   }

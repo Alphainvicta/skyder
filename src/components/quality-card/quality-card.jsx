@@ -1,16 +1,40 @@
 import React from "react";
 import "./quality-card.css";
+import Input from "../input/input";
+import { ReactComponent as List } from "../../icons/checkmark.svg";
 
-const Qcard = ({ title, video, detail1, detail2, detail3, detail4 }) => (
-  <div className="Qcard-cont">
-    <div className="title-card">{title}</div>
-    <video src={video} autoPlay="True" loop="True" />
-    <ul className="details-cont">
-      <li>{detail1}</li>
-      <li>{detail2}</li>
-      <li>{detail3}</li>
-      <li>{detail4}</li>
-    </ul>
+const Qcard = ({ radio, title, video, detail1, detail2, detail3, detail4 }) => (
+  <div className="Qcard_cont">
+    <div className="card_cont">
+      <div className="title_card">{title}</div>
+      <video src={video} autoPlay="True" loop="True" />
+      <div className="details_cont">
+        <li>
+          <List />
+          {detail1}
+        </li>
+        <li>
+          <List />
+          {detail2}
+        </li>
+        <li>
+          <List />
+          {detail3}
+        </li>
+        <li>
+          <List />
+          {detail4}
+        </li>
+      </div>
+    </div>
+
+    <Input
+      id={radio}
+      name="cards_radio"
+      value={radio}
+      type="radio"
+      label="Escoger paquete"
+    />
   </div>
 );
 

@@ -1,12 +1,12 @@
 .step1_cont {
-  padding: 5rem 0rem;
+  padding: clamp(2.5rem, 3vw, 5rem) 0rem;
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: clamp(5rem, 6vw, 10rem);
   .block_a {
     display: flex;
     justify-content: space-between;
-    font-size: 5.5rem;
+    font-size: clamp(2.5rem, calc(3vw + 0.1rem), 5.5rem);
     font-weight: bold;
   }
 
@@ -18,17 +18,17 @@
   }
 
   .block_c {
-    padding: 6rem;
+    padding: clamp(3rem, 4vw, 6rem);
     display: flex;
     gap: 2rem;
     flex-direction: column;
     background-color: white;
     .title {
-      font-size: 2.8rem;
+      font-size: clamp(2rem, calc(2vw + 0.1rem), 2.8rem);
       font-weight: bold;
     }
     .selection {
-      font-size: 2.4rem;
+      font-size: clamp(1.6rem, calc(2vw + 0.1rem), 2.4rem);
       opacity: 70%;
     }
   }
@@ -38,22 +38,19 @@
   }
 
   .service_quality {
-    padding: 5rem 0rem;
+    padding: clamp(2.5rem, 3vw, 5rem) 0rem;
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: clamp(5rem, 6vw, 10rem);
 
     .title {
-      font-size: 5.5rem;
+      font-size: clamp(2.5rem, calc(3vw + 0.1rem), 5.5rem);
       font-weight: bold;
     }
 
     .block_a2 {
-      height: 80rem;
-      display: flex;
-      flex-flow: column wrap;
-      gap: 4rem;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
     }
 
     .block_b2 {

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./quote.css";
 
 import QuoteStep1 from "./quote-steps/step-1/quote-step-1";
 import QuoteStep2 from "./quote-steps/step-2/quote-step-2";
@@ -22,12 +21,10 @@ export const Quote = () => {
         return (
           <QuoteStep3 currentStep={currentStep} stepFollower={stepFollower} />
         );
-      default:
-        return <div>The number is something else!</div>;
     }
   };
 
-  return <form className="quote_cont">{renderStep(currentStep)}</form>;
+  return <form>{renderStep(currentStep)}</form>;
 };
 
 export default Quote;

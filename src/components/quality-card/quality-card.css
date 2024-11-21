@@ -1,28 +1,29 @@
-.Qcard-cont {
-  width: 47.3rem;
-  height: 68.6rem;
-  background: #ffffff;
+.Qcard_cont {
   display: flex;
   flex-direction: column;
-
-  .title-card {
-    font-weight: bold;
-    font-size: 3.3rem;
-    color: #000000;
-    margin-left: 4.1rem;
-    margin-top: 5.2rem;
-  }
-
-  video {
-    margin-top: 4rem;
-  }
-
-  .details-cont {
-    font-weight: bold;
-    font-size: 2.1rem;
-    line-height: 250%;
-    color: #000000;
-    margin-left: 4.1rem;
-    list-style-image: url(../../icons/checkmark.svg);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  .card_cont {
+    max-width: clamp(35rem, 30vw, 47rem);
+    padding: clamp(2rem, 5vw, 4rem) 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 5vw, 4rem);
+    background-color: white;
+    .title_card {
+      margin-left: clamp(2rem, 3vw, 4rem);
+      font-size: clamp(2.5rem, calc(4vw + 0.1rem), 3.3rem);
+      font-weight: bold;
+    }
+    .details_cont {
+      margin-left: clamp(2rem, 3vw, 4rem);
+      font-size: clamp(1.6rem, calc(3vw + 0.1rem), 2.3rem);
+      list-style: none;
+      li {
+        svg {
+          margin-right: clamp(1rem, 2vw, 3rem);
+        }
+      }
+    }
   }
 }
