@@ -20,11 +20,7 @@ const Nav = ({ isMobile }) => {
 
   return (
     <nav>
-      {isVisible ? (
-        <span className="nav_background" />
-      ) : (
-        <span className="top_nav_background" />
-      )}
+      {isVisible ? <span className="nav_background" /> : ""}
       <div className={`${isVisible ? "" : "not_"}visible`}>
         <div className="top_nav">
           <div className="side_a">
@@ -50,7 +46,7 @@ const Nav = ({ isMobile }) => {
                 <Behance viewBox="0 0 28 32" />
               </a>
             </div>
-            <button onClick={() => setVisible(!isVisible)}>
+            <button onClick={() => clickEvent(!isVisible)}>
               <span className="bar1" />
               <span className="bar2" />
             </button>

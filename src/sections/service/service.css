@@ -48,11 +48,6 @@
     .goquote_cont {
       .button {
         width: 100%;
-        a {
-          button {
-            width: 100%;
-          }
-        }
       }
     }
   }

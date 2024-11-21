@@ -15,6 +15,11 @@
       font-size: clamp(2.5rem, calc(4vw + 0.1rem), 3.3rem);
       font-weight: bold;
     }
+
+    video {
+      max-width: clamp(35rem, 30vw, 100%);
+    }
+
     .details_cont {
       margin-left: clamp(2rem, 3vw, 4rem);
       font-size: clamp(1.6rem, calc(3vw + 0.1rem), 2.3rem);

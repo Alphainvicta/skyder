@@ -11,10 +11,8 @@
   }
 
   .block_b {
-    height: 20rem;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
   }
 
   .block_c {
@@ -50,14 +48,14 @@
 
     .block_a2 {
       display: grid;
-      grid-template-columns: 33% 33% 33%;
+      grid-template-columns: repeat(3, 33%);
     }
 
     .block_b2 {
       display: flex;
       justify-content: center;
-      gap: 4rem;
-      font-size: 2.5rem;
+      gap: clamp(1rem, 2vw, 4rem);
+      font-size: clamp(1.2rem, calc(2vw + 0.1rem), 2.5rem);
       font-weight: bold;
 
       p {
@@ -65,14 +63,44 @@
       }
 
       input {
-        width: 40rem;
+        width: clamp(20rem, 20vw, 40rem);
       }
     }
 
     .custom_time {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      input {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 43rem) {
+  .step1_cont {
+    .block_b {
+      display: block;
+    }
+    .block_c {
+      text-align: center;
+    }
+    .service_quality {
+      .title {
+        text-align: center;
+      }
+      .block_a2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .block_b2 {
+        text-align: center;
+      }
+    }
+    .button_container {
+      width: 100%;
     }
   }
 }
