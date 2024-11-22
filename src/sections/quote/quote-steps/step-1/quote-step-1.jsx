@@ -8,6 +8,8 @@ import Qcardlist from "../../../../components/quality-card/quality-card-list.jsx
 export const QuoteStep1 = ({ currentStep, stepFollower }) => {
   const [valueSlider, setValueSlider] = useState(15);
 
+  const progressWidth = ((valueSlider - 15) / (150 - 15)) * 100;
+
   const handleSliderChange = (event) => {
     setValueSlider(event.target.value);
   };
@@ -114,15 +116,23 @@ export const QuoteStep1 = ({ currentStep, stepFollower }) => {
           </div>
           <div className="block_b2">
             <p>15 segundos</p>
-            <input
-              type="range"
-              id="slider"
-              min="15"
-              max="150"
-              step="1"
-              value={valueSlider}
-              onChange={handleSliderChange}
-            />
+            <div className="slider_cont">
+              <span />
+              <input
+                type="range"
+                id="slider"
+                min="15"
+                max="150"
+                step="1"
+                value={valueSlider}
+                onChange={handleSliderChange}
+              />
+              <div
+                className="slider_progress"
+                style={{ width: `${progressWidth}%` }}
+              />
+            </div>
+
             <p>{valueSlider} segundos</p>
           </div>
           <div className="custom_time">

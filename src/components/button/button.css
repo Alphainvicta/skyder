@@ -14,13 +14,13 @@
   }
 
   .left:hover {
-    transform: translate(-15px, -10px);
-    box-shadow: -15px 10px black;
+    transform: translate(-1.5rem, -1rem);
+    box-shadow: -1.5rem 1rem black;
   }
 
   .right:hover {
-    transform: translate(15px, -10px);
-    box-shadow: 15px 10px black;
+    transform: translate(1.5rem, -1rem);
+    box-shadow: 1.5rem 1rem black;
   }
 }
 
