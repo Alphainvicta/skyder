@@ -21,11 +21,11 @@
       gap: clamp(1rem, 2vw, 3rem);
 
       .input_cont {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: start;
-
         label {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+        input {
           margin: 0;
         }
       }

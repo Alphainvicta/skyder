@@ -76,6 +76,7 @@
     .block_a2 {
       display: grid;
       grid-template-columns: repeat(3, 33%);
+      margin-bottom: 2rem;
     }
 
     .block_b2 {
@@ -97,8 +98,16 @@
     .custom_time {
       display: flex;
       justify-content: center;
-      input {
-        margin: 0;
+      .input_cont {
+        label {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          gap: 2rem;
+        }
+        input {
+          margin: 0;
+        }
       }
     }
   }
@@ -136,7 +145,7 @@
       .block_a2 {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 5rem;
       }
 
       .block_b2 {

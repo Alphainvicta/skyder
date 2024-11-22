@@ -19,7 +19,6 @@ export const QuoteStep1 = ({ currentStep, stepFollower }) => {
     servicio5: false,
     servicio6: false,
     servicio7: false,
-    otroTiempoBox: false,
   });
 
   const handleCheckboxChange = (event) => {
@@ -128,23 +127,12 @@ export const QuoteStep1 = ({ currentStep, stepFollower }) => {
           </div>
           <div className="custom_time">
             <Input
-              id="otroTiempoBox"
-              name="otroTiempoBox"
-              type="checkbox"
-              label={selectedServices.otroTiempoBox ? "" : "Otro tiempo"}
-              checked={selectedServices.otroTiempoBox}
-              onChange={handleCheckboxChange}
+              id="otroTiempoText"
+              name="otroTiempoText"
+              type="text"
+              value="Otro tiempo"
+              label="Otro tiempo"
             />
-            {selectedServices.otroTiempoBox ? (
-              <Input
-                id="otroTiempoText"
-                name="otroTiempoText"
-                type="text"
-                value="Otro tiempo"
-              />
-            ) : (
-              ""
-            )}
           </div>
 
           <hr />

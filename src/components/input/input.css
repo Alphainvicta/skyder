@@ -22,10 +22,8 @@
   }
 
   input[type="radio"] {
-    display: inline-block;
-    width: 3.5rem;
-    height: 3.5rem;
-    cursor: pointer;
+    position: absolute;
+    opacity: 0;
   }
 
   label {
