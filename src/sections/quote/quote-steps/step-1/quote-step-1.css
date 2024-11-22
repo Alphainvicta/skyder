@@ -13,6 +13,33 @@
   .block_b {
     display: grid;
     grid-template-columns: repeat(2, 50%);
+
+    .input_cont {
+      label {
+        margin: clamp(0.5rem, 1vw, 1.5rem) 0rem;
+        border: clamp(0.2rem, 0.2vw, 0.3rem) solid black;
+        padding: clamp(2rem, 3vw, 3rem);
+        width: 70%;
+        cursor: pointer;
+        background-color: transparent;
+        transition: 0.2s;
+        input {
+          width: 0;
+          height: 0;
+        }
+      }
+
+      label:hover {
+        background-color: black;
+        color: white;
+        transition: 0.2s;
+      }
+
+      label:has(input:checked) {
+        background-color: black;
+        color: white;
+      }
+    }
   }
 
   .block_c {
@@ -77,10 +104,27 @@
   }
 }
 
+@keyframes checkbox_checked {
+  0% {
+    background-position-x: -100%;
+    background-color: black;
+  }
+
+  100% {
+    background-position-x: center;
+    background-color: black;
+  }
+}
+
 @media only screen and (max-width: 43rem) {
   .step1_cont {
     .block_b {
       display: block;
+      .input_cont {
+        label {
+          width: 100%;
+        }
+      }
     }
     .block_c {
       text-align: center;

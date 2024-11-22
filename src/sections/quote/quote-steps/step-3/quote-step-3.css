@@ -1,35 +1,33 @@
 .step3_cont {
-  padding: 5rem 0;
+  padding: clamp(2.5rem, 3vw, 5rem) 0rem;
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: clamp(5rem, 6vw, 10rem);
 
   .block_a {
     display: flex;
     justify-content: space-between;
-    font-size: 5.5rem;
+    font-size: clamp(2.5rem, calc(3vw + 0.1rem), 5.5rem);
     font-weight: bold;
   }
 
   .block_b {
-    display: flex;
-    gap: 10rem;
+    display: grid;
+    grid-template-columns: 60% clamp(2rem, 3vw, 4rem) 40%;
 
     .side_a {
-      flex-grow: 1;
-      align-self: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 4rem;
-      label {
-        margin: 0;
-      }
+      gap: clamp(1rem, 2vw, 3rem);
 
       .input_cont {
         display: flex;
         flex-direction: column-reverse;
         align-items: start;
+
+        label {
+          margin: 0;
+        }
       }
 
       .textarea_cont {
@@ -37,50 +35,50 @@
         flex-direction: column;
 
         textarea {
-          height: 10em;
+          height: clamp(15rem, 15vw, 20rem);
+          padding-left: 1rem;
           background: #f0f0f0;
-          border: 0.3rem solid black;
-          box-sizing: border-box;
+          border: clamp(0.2rem, 0.2vw, 0.3rem) solid black;
           resize: none;
 
           font-weight: bold;
-          font-size: 2.4rem;
+          font-size: clamp(1.2rem, calc(2vw + 0.1rem), 2.4rem);
           color: rgba(0, 0, 0, 0.7);
         }
 
         label {
           font-weight: bold;
-          font-size: 2.5rem;
-          line-height: 210%;
+          font-size: clamp(1.2rem, calc(2vw + 0.1rem), 2.5rem);
           color: black;
         }
 
         .char_count {
           position: relative;
-          top: -3rem;
-          left: -1.5rem;
+          bottom: clamp(1.5rem, 3vw, 3rem);
+          right: clamp(0.75rem, 2vw, 1.5rem);
           align-self: flex-end;
-          font-size: 1.4rem;
+          font-size: clamp(0.7rem, calc(1vw + 0.1rem), 1.4rem);
           opacity: 70%;
         }
       }
     }
 
     .side_b {
+      grid-column-start: 3;
+
       .terms_cont {
-        padding: 5rem;
-        width: 60rem;
+        padding: clamp(2rem, 3vw, 5rem);
         display: flex;
         flex-direction: column;
         background-color: white;
 
         .terms_title {
-          font-size: 2.8rem;
+          font-size: clamp(1.4rem, calc(2vw + 0.1rem), 2.8rem);
           font-weight: bold;
         }
 
         p {
-          font-size: 2.4rem;
+          font-size: clamp(1.2rem, calc(2vw + 0.1rem), 2.4rem);
           opacity: 70%;
           text-align: justify;
         }
@@ -91,5 +89,32 @@
   .buttons_container {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 43rem) {
+  .step3_cont {
+    .block_b {
+      display: flex;
+      flex-direction: column;
+      .side_a {
+        .input_cont {
+          input {
+          }
+        }
+      }
+      .side_b {
+        .terms_cont {
+          .terms_title {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .buttons_container {
+      flex-direction: column-reverse;
+      gap: 2rem;
+      width: 100%;
+    }
   }
 }
