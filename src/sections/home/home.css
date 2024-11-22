@@ -1,28 +1,18 @@
 .home_cont {
   position: relative;
   .vector_cont {
+    top: clamp(-15rem, -7vw, -3rem);
+    right: clamp(5.5rem, 8vw, 11rem);
     width: 100%;
     position: absolute;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
     z-index: -1;
 
-    .lvector {
-      position: relative;
-      right: clamp(5.5rem, 6vw, 11rem);
-      bottom: 10rem;
-      svg {
-        width: clamp(10rem, 15vw, 30rem);
-      }
-    }
-    .rvector {
-      position: relative;
-      left: clamp(5.5rem, 6vw, 11rem);
-      bottom: 10rem;
-      svg {
-        width: clamp(10rem, 20vw, 35rem);
-      }
+    svg {
+      position: absolute;
+      width: 100vw;
+      height: auto;
     }
   }
 
