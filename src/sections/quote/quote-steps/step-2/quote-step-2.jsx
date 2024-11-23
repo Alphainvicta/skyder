@@ -4,7 +4,7 @@ import "./quote-step-2.css";
 import Input from "../../../../components/input/input.jsx";
 import Button from "../../../../components/button/button.jsx";
 import { ReactComponent as Calendar } from "../../../../icons/Calendar.svg";
-import { ReactComponent as Map } from "../../../../icons/Map.svg";
+import MapWithSearch from "./gMap/gMap.jsx";
 
 export const QuoteStep2 = ({ currentStep, stepFollower }) => {
   return (
@@ -19,8 +19,7 @@ export const QuoteStep2 = ({ currentStep, stepFollower }) => {
           <p>info inputed</p>
         </div>
         <div className="map_cont">
-          <Map />
-          <p>info inputed</p>
+          <MapWithSearch />
         </div>
       </div>
       <hr />

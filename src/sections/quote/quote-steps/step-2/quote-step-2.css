@@ -12,8 +12,8 @@
   }
 
   .block_b {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
 
     .calendar_cont {
       display: flex;
@@ -45,6 +45,10 @@
 
 @media only screen and (max-width: 43rem) {
   .step2_cont {
+    .block_b {
+      display: flex;
+      flex-direction: column;
+    }
     .buttons_container {
       flex-direction: column-reverse;
       gap: 2rem;

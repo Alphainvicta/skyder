@@ -1,0 +1,28 @@
+.g_map_cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 4rem);
+  text-align: center;
+
+  .input_cont {
+    position: relative;
+    width: 100%;
+    label {
+      input {
+        position: absolute;
+        top: clamp(0.5rem, 0.5vw, 1rem);
+        left: clamp(0.5rem, 0.5vw, 1rem);
+        width: 60%;
+        border-radius: 0.5rem;
+        background-color: white;
+        opacity: 80%;
+        color: black;
+        border: none;
+      }
+      input::placeholder {
+        color: black;
+      }
+    }
+  }
+}

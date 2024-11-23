@@ -75,7 +75,7 @@
 
     .block_a2 {
       display: grid;
-      grid-template-columns: repeat(3, 33%);
+      grid-template-columns: repeat(3, calc(100% / 3));
       margin-bottom: 2rem;
     }
 

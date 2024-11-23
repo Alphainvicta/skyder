@@ -21,6 +21,11 @@ export const Quote = () => {
         return (
           <QuoteStep3 currentStep={currentStep} stepFollower={stepFollower} />
         );
+
+      default:
+        return (
+          <QuoteStep1 currentStep={currentStep} stepFollower={stepFollower} />
+        );
     }
   };
 
