@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./quote-step-2.css";
 
-import Input from "../../../../components/input/input.jsx";
 import Button from "../../../../components/button/button.jsx";
-import { ReactComponent as Calendar } from "../../../../icons/Calendar.svg";
-import MapWithSearch from "./gMap/gMap.jsx";
+import GMap from "./gMap/gMap.jsx";
+import GCalendar from "./gCalendar/gCalendar.jsx";
 
 export const QuoteStep2 = ({ currentStep, stepFollower }) => {
   return (
@@ -15,11 +14,10 @@ export const QuoteStep2 = ({ currentStep, stepFollower }) => {
       </div>
       <div className="block_b">
         <div className="calendar_cont">
-          <Calendar />
-          <p>info inputed</p>
+          <GCalendar />
         </div>
         <div className="map_cont">
-          <MapWithSearch />
+          <GMap />
         </div>
       </div>
       <hr />

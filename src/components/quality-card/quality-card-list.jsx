@@ -1,6 +1,5 @@
 import React from "react";
 import Qcard from "./quality-card.jsx";
-import Input from "../input/input.jsx";
 import video1 from "../../videos/simple.mp4";
 import video2 from "../../videos/standard.mp4";
 import video3 from "../../videos/special.mp4";

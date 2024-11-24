@@ -11,13 +11,14 @@ import Input from "../../../../../components/input/input.jsx";
 
 const libraries = ["places"];
 
-export const MapWithSearch = () => {
+export const GMap = () => {
   const [mapCenter, setMapCenter] = useState({
     lat: 20.659698,
     lng: -103.349609,
   });
-  const [markerPosition, setMarkerPosition] = useState(mapCenter);
+  const [markerPosition, setMarkerPosition] = useState(null);
   const [locationText, setLocationText] = useState("");
+  const [locationTextField, setLocationTextField] = useState("");
   const [autocomplete, setAutocomplete] = useState(null);
 
   const handleMapClick = async (event) => {
@@ -52,14 +53,20 @@ export const MapWithSearch = () => {
       const data = await response.json();
       if (data.status === "OK" && data.results[0]) {
         setLocationText(data.results[0].formatted_address);
+        setLocationTextField(data.results[0].formatted_address);
       } else {
-        console.log(data.status);
         setLocationText(`Lat: ${lat}, Lng: ${lng}`);
+        setLocationTextField(`Lat: ${lat}, Lng: ${lng}`);
       }
     } catch (error) {
       setLocationText(`Lat: ${lat}, Lng: ${lng}`);
       console.error("Error fetching address:", error);
+      setLocationTextField(`Lat: ${lat}, Lng: ${lng}`);
     }
+  };
+
+  const clearLocationTextField = () => {
+    setLocationTextField("\n");
   };
 
   const onLoadAutocomplete = (autocompleteInstance) => {
@@ -67,33 +74,42 @@ export const MapWithSearch = () => {
   };
 
   return (
-    <div className="g_map_cont">
+    <div>
       <LoadScript
         googleMapsApiKey={process.env.REACT_APP_MAPS_API}
         libraries={libraries}
       >
-        <GoogleMap
-          mapContainerStyle={{ width: "100%", height: "50rem" }}
-          center={mapCenter}
-          zoom={10}
-          onClick={handleMapClick}
-          options={{
-            mapTypeControl: false,
-            streetViewControl: false,
-          }}
-        >
-          <Autocomplete
-            onLoad={onLoadAutocomplete}
-            onPlaceChanged={handlePlaceChange}
+        <div className="g_map_cont">
+          <p>{locationText || "Lugar de grabación"}</p>
+          <GoogleMap
+            mapContainerStyle={{ width: "100%", height: "50rem" }}
+            center={mapCenter}
+            zoom={12}
+            onClick={handleMapClick}
+            options={{
+              mapTypeControl: false,
+              streetViewControl: false,
+            }}
           >
-            <Input type="text" id="lugar" name="lugar" value="Lugar" />
-          </Autocomplete>
-          {locationText ? <Marker position={markerPosition} /> : ""}
-        </GoogleMap>
-        <p>{locationText || "Lugar de grabación"}</p>
+            <Autocomplete
+              onLoad={onLoadAutocomplete}
+              onPlaceChanged={handlePlaceChange}
+            >
+              <div onClick={clearLocationTextField}>
+                <Input
+                  type="text"
+                  id="lugar"
+                  name="lugar"
+                  value={locationTextField || "Lugar"}
+                />
+              </div>
+            </Autocomplete>
+            {locationText ? <Marker position={markerPosition} /> : ""}
+          </GoogleMap>
+        </div>
       </LoadScript>
     </div>
   );
 };
 
-export default MapWithSearch;
+export default GMap;

@@ -15,22 +15,6 @@
     display: grid;
     grid-template-columns: repeat(2, 50%);
 
-    .calendar_cont {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 4rem;
-    }
-
-    .map_cont {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 4rem;
-    }
-
     p {
       font-size: clamp(1.6rem, calc(2vw + 0.1rem), 2.4rem);
       font-weight: bold;
@@ -48,6 +32,7 @@
     .block_b {
       display: flex;
       flex-direction: column;
+      gap: 5rem;
     }
     .buttons_container {
       flex-direction: column-reverse;
