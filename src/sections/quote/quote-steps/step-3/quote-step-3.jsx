@@ -10,7 +10,7 @@ export const QuoteStep3 = ({
   formData,
   handleInputChange,
 }) => {
-  const [details, setDetails] = useState("");
+  const [details, setDetails] = useState(formData.extraDetails);
   const maxLength = 500;
 
   const handleDetailsChange = (e) => {
@@ -28,10 +28,10 @@ export const QuoteStep3 = ({
   };
 
   useEffect(() => {
-    if (details != null) {
+    if (details) {
       handleInputChange("extraDetails", details);
     }
-  }, [details]);
+  }, [details, handleInputChange]);
 
   return (
     <div className="step3_cont">
@@ -47,6 +47,7 @@ export const QuoteStep3 = ({
             type="text"
             label="Nombre"
             value="Nombre"
+            defaultValue={formData.name}
             onChange={(e) => handleInputChange("name", e.target.value)}
           />
           <Input
@@ -55,6 +56,7 @@ export const QuoteStep3 = ({
             type="email"
             label="Email"
             value="Email"
+            defaultValue={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
           />
           <div className="textarea_cont">

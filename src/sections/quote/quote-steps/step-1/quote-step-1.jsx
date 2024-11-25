@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./quote-step-1.css";
 
 import Input from "../../../../components/input/input.jsx";
@@ -11,57 +11,50 @@ export const QuoteStep1 = ({
   formData,
   handleInputChange,
 }) => {
-  const [selectedServices, setSelectedServices] = useState({
-    servicio1: false,
-    servicio2: false,
-    servicio3: false,
-    servicio4: false,
-    servicio5: false,
-    servicio6: false,
-    servicio7: false,
-  });
-  const [valueSlider, setValueSlider] = useState(15);
-
-  const handleSliderChange = (event) => {
-    setValueSlider(event.target.value);
-    handleInputChange("videoLenght", `${event.target.value} segundos`);
-  };
+  const [selectedServices, setSelectedServices] = useState(
+    formData.serviceList
+  );
+  const [valueSlider, setValueSlider] = useState(
+    parseInt(formData.videoLenght)
+  );
+  const [valueInput, setValueInput] = useState(formData.videoLengthInput);
 
   const progressWidth = ((valueSlider - 15) / (150 - 15)) * 100;
 
-  const handleCustomTimeInput = (event) => {
-    event.target.value
-      ? handleInputChange("videoLenght", event.target.value)
-      : handleInputChange("videoLenght", `${valueSlider} segundos`);
-  };
-  const handleCheckboxChange = (event) => {
+  const handleInputChangeForService = (event) => {
     const { name, checked } = event.target;
 
-    // Update the state first
-    setSelectedServices((prevState) => {
-      const updatedServices = {
-        ...prevState,
-        [name]: checked,
-      };
-
-      // Calculate selected service names based on updated state
-      const selectedServiceNames = Object.keys(updatedServices)
-        .filter((service) => updatedServices[service])
-        .map((service) => service.replace("servicio", "Servicio "))
-        .join(" - ");
-
-      // Call handleInputChange with the updated service names
-      handleInputChange("serviceList", selectedServiceNames);
-
-      return updatedServices;
-    });
+    setSelectedServices((prevState) => ({
+      ...prevState,
+      [name]: checked,
+    }));
   };
 
-  const selectionMessage =
-    Object.keys(selectedServices)
+  useEffect(() => {
+    const selectedServiceNames = Object.keys(selectedServices)
       .filter((service) => selectedServices[service])
       .map((service) => service.replace("servicio", "Servicio "))
-      .join(" - ") || "No hay servicios seleccionados";
+      .join(" - ");
+
+    handleInputChange("finalServiceList", selectedServiceNames);
+    handleInputChange("serviceList", selectedServices);
+  }, [selectedServices, handleInputChange]);
+
+  useEffect(() => {
+    if (valueInput) {
+      handleInputChange("videoLengthInput", valueInput);
+    }
+  }, [valueInput, handleInputChange]);
+
+  useEffect(() => {
+    if (String(valueSlider) !== String(formData.videoLenght)) {
+      handleInputChange("videoLenght", valueSlider);
+      handleInputChange("videoLengthInput", "");
+      setValueInput("");
+      if (document.getElementById("otroTiempoText"))
+        document.getElementById("otroTiempoText").value = "";
+    }
+  }, [valueSlider, handleInputChange, formData.videoLenght]);
 
   return (
     <div className="step1_cont">
@@ -76,7 +69,7 @@ export const QuoteStep1 = ({
           type="checkbox"
           label="Servicio 1"
           checked={selectedServices.servicio1}
-          onChange={handleCheckboxChange}
+          onChange={handleInputChangeForService}
         />
         <Input
           id="servicio2"
@@ -84,7 +77,7 @@ export const QuoteStep1 = ({
           type="checkbox"
           label="Servicio 2"
           checked={selectedServices.servicio2}
-          onChange={handleCheckboxChange}
+          onChange={handleInputChangeForService}
         />
         <Input
           id="servicio3"
@@ -92,7 +85,7 @@ export const QuoteStep1 = ({
           type="checkbox"
           label="Servicio 3"
           checked={selectedServices.servicio3}
-          onChange={handleCheckboxChange}
+          onChange={handleInputChangeForService}
         />
         <Input
           id="servicio4"
@@ -100,7 +93,7 @@ export const QuoteStep1 = ({
           type="checkbox"
           label="Servicio 4"
           checked={selectedServices.servicio4}
-          onChange={handleCheckboxChange}
+          onChange={handleInputChangeForService}
         />
         <Input
           id="servicio5"
@@ -108,7 +101,7 @@ export const QuoteStep1 = ({
           type="checkbox"
           label="Servicio 5"
           checked={selectedServices.servicio5}
-          onChange={handleCheckboxChange}
+          onChange={handleInputChangeForService}
         />
         <Input
           id="servicio6"
@@ -116,7 +109,7 @@ export const QuoteStep1 = ({
           type="checkbox"
           label="Servicio 6"
           checked={selectedServices.servicio6}
-          onChange={handleCheckboxChange}
+          onChange={handleInputChangeForService}
         />
         <Input
           id="servicio7"
@@ -124,19 +117,24 @@ export const QuoteStep1 = ({
           type="checkbox"
           label="Servicio 7"
           checked={selectedServices.servicio7}
-          onChange={handleCheckboxChange}
+          onChange={handleInputChangeForService}
         />
       </div>
       <div className="block_c">
         <div className="title">Seleccionados</div>
-        <div className="selection">{selectionMessage}</div>
+        <div className="selection">
+          {formData.finalServiceList || "No hay servicios seleccionados"}
+        </div>
       </div>
       <hr />
       {selectedServices.servicio4 ? (
         <div className="service_quality">
           <div className="title">Calidad de salida</div>
           <div className="block_a2">
-            <Qcardlist handleInputChange={handleInputChange} />
+            <Qcardlist
+              formData={formData}
+              handleInputChange={handleInputChange}
+            />
           </div>
           <div className="block_b2">
             <p>15 segundos</p>
@@ -149,7 +147,7 @@ export const QuoteStep1 = ({
                 max="150"
                 step="1"
                 value={valueSlider}
-                onChange={handleSliderChange}
+                onChange={(e) => setValueSlider(e.target.value)}
               />
               <div
                 className="slider_progress"
@@ -165,8 +163,9 @@ export const QuoteStep1 = ({
               name="otroTiempoText"
               type="text"
               value="Otro tiempo"
+              defaultValue={valueInput}
               label="Otro tiempo"
-              onChange={handleCustomTimeInput}
+              onChange={(e) => setValueInput(e.target.value)}
             />
           </div>
 
@@ -183,7 +182,7 @@ export const QuoteStep1 = ({
       ) : (
         <div
           className={`button_container ${
-            formData.serviceList ? "" : "disable"
+            formData.finalServiceList ? "" : "disable"
           }`}
           onClick={() => stepFollower(currentStep + 1)}
         >

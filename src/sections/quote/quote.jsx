@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import QuoteStep1 from "./quote-steps/step-1/quote-step-1";
 import QuoteStep2 from "./quote-steps/step-2/quote-step-2";
@@ -8,29 +8,38 @@ export const Quote = () => {
   const [currentStep, stepFollower] = useState(1);
 
   const [formData, setFormData] = useState({
-    serviceList: "",
+    finalServiceList: "",
+    serviceList: {
+      servicio1: false,
+      servicio2: false,
+      servicio3: false,
+      servicio4: false,
+      servicio5: false,
+      servicio6: false,
+      servicio7: false,
+    },
     qualityOutput: "",
-    videoLenght: "15 segundos",
+    videoLenght: "15",
+    videoLengthInput: "",
+    finaldate: "",
     date: "",
-    location: "",
+    finalLocation: "",
+    marker: "",
     name: "",
     email: "",
     extraDetails: "",
   });
 
-  // Function to handle input changes
-  const handleInputChange = (field, value) => {
+  const handleInputChange = useCallback((field, value) => {
     setFormData((prevData) => ({
       ...prevData,
       [field]: value,
     }));
-  };
+  }, []);
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
-    console.log("pepepepepepe");
   };
 
   const renderStep = (step) => {

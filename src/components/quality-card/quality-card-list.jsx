@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Qcard from "./quality-card.jsx";
 import video1 from "../../videos/simple.mp4";
 import video2 from "../../videos/standard.mp4";
@@ -48,15 +48,28 @@ class Qcardlist extends React.Component {
     this.props.handleInputChange("qualityOutput", selectedRadio);
   };
 
+  // componentDidMount() {
+  //   this.storedChecked();
+  // }
+
+  // storedChecked = () => {
+  //   const { qualityOutput } = this.props.formData;
+  //   if (qualityOutput) {
+  //     const radioElement = document.getElementById(qualityOutput);
+  //     if (radioElement) {
+  //       radioElement.checked = true;
+  //     }
+  //   }
+  // };
+
   render() {
     return this.state.cards.map(({ id, ...cardsprops }) => (
-      <>
-        <Qcard
-          key={id}
-          {...cardsprops}
-          onRadioChange={this.handleRadioChange}
-        />
-      </>
+      <Qcard
+        key={id}
+        {...cardsprops}
+        onRadioChange={this.handleRadioChange}
+        checked={this.props.formData.qualityOutput === cardsprops.radio}
+      />
     ));
   }
 }

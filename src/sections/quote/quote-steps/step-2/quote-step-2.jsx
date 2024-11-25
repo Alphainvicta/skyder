@@ -19,10 +19,13 @@ export const QuoteStep2 = ({
       </div>
       <div className="block_b">
         <div className="calendar_cont">
-          <GCalendar handleInputChange={handleInputChange} />
+          <GCalendar
+            formData={formData}
+            handleInputChange={handleInputChange}
+          />
         </div>
         <div className="map_cont">
-          <GMap handleInputChange={handleInputChange} />
+          <GMap formData={formData} handleInputChange={handleInputChange} />
         </div>
       </div>
       <hr />
@@ -35,7 +38,7 @@ export const QuoteStep2 = ({
         </div>
         <div
           className={`right_button ${
-            formData.date && formData.location ? "" : "disable"
+            formData.finaldate && formData.finalLocation ? "" : "disable"
           }`}
           onClick={() => stepFollower(currentStep + 1)}
         >
