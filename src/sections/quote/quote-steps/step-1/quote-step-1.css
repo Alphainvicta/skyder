@@ -62,6 +62,16 @@
     align-self: flex-end;
   }
 
+  .button_container.disable {
+    pointer-events: none;
+    .button_cont {
+      button {
+        background-color: black;
+        transition: 0.5s;
+      }
+    }
+  }
+
   .service_quality {
     padding: clamp(2.5rem, 3vw, 5rem) 0rem;
     display: flex;

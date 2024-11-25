@@ -23,7 +23,7 @@ function App() {
     const isMobileDevice = regexp.test(details);
 
     // Set the state based on whether it's a mobile device or not
-    if (isMobileDevice) {
+    if (isMobileDevice && navigator.maxTouchPoints > 0) {
       setDeviceType(true);
     } else {
       setDeviceType(false);

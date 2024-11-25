@@ -5,14 +5,27 @@ import Input from "../../../../components/input/input.jsx";
 import Button from "../../../../components/button/button.jsx";
 import Qcardlist from "../../../../components/quality-card/quality-card-list.jsx";
 
-export const QuoteStep1 = ({ currentStep, stepFollower }) => {
+export const QuoteStep1 = ({
+  currentStep,
+  stepFollower,
+  formData,
+  handleInputChange,
+}) => {
   const [valueSlider, setValueSlider] = useState(15);
-
-  const progressWidth = ((valueSlider - 15) / (150 - 15)) * 100;
 
   const handleSliderChange = (event) => {
     setValueSlider(event.target.value);
+    handleInputChange("videoLenght", `${event.target.value} segundos`);
   };
+
+  const progressWidth = ((valueSlider - 15) / (150 - 15)) * 100;
+
+  const handleCustomTimeInput = (event) => {
+    if (event.target.value)
+      handleInputChange("videoLenght", event.target.value);
+    else handleInputChange("videoLenght", `${valueSlider} segundos`);
+  };
+
   const [selectedServices, setSelectedServices] = useState({
     servicio1: false,
     servicio2: false,
@@ -25,19 +38,32 @@ export const QuoteStep1 = ({ currentStep, stepFollower }) => {
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
-    setSelectedServices((prevState) => ({
-      ...prevState,
-      [name]: checked,
-    }));
+
+    // Update the state first
+    setSelectedServices((prevState) => {
+      const updatedServices = {
+        ...prevState,
+        [name]: checked,
+      };
+
+      // Calculate selected service names based on updated state
+      const selectedServiceNames = Object.keys(updatedServices)
+        .filter((service) => updatedServices[service])
+        .map((service) => service.replace("servicio", "Servicio "))
+        .join(" - ");
+
+      // Call handleInputChange with the updated service names
+      handleInputChange("serviceList", selectedServiceNames);
+
+      return updatedServices; // Return the updated state
+    });
   };
 
-  const selectedServiceNames = Object.keys(selectedServices)
-    .filter((service) => selectedServices[service])
-    .map((service) => service.replace("servicio", "Servicio "))
-    .join(" - ");
-
   const selectionMessage =
-    selectedServiceNames || "No hay servicios seleccionados";
+    Object.keys(selectedServices)
+      .filter((service) => selectedServices[service])
+      .map((service) => service.replace("servicio", "Servicio "))
+      .join(" - ") || "No hay servicios seleccionados";
 
   return (
     <div className="step1_cont">
@@ -112,7 +138,7 @@ export const QuoteStep1 = ({ currentStep, stepFollower }) => {
         <div className="service_quality">
           <div className="title">Calidad de salida</div>
           <div className="block_a2">
-            <Qcardlist />
+            <Qcardlist handleInputChange={handleInputChange} />
           </div>
           <div className="block_b2">
             <p>15 segundos</p>
@@ -142,12 +168,15 @@ export const QuoteStep1 = ({ currentStep, stepFollower }) => {
               type="text"
               value="Otro tiempo"
               label="Otro tiempo"
+              onChange={handleCustomTimeInput}
             />
           </div>
 
           <hr />
           <div
-            className="button_container"
+            className={`button_container ${
+              formData.qualityOutput ? "" : "disable"
+            }`}
             onClick={() => stepFollower(currentStep + 1)}
           >
             <Button text="Siguente" />
@@ -155,7 +184,9 @@ export const QuoteStep1 = ({ currentStep, stepFollower }) => {
         </div>
       ) : (
         <div
-          className="button_container"
+          className={`button_container ${
+            formData.serviceList ? "" : "disable"
+          }`}
           onClick={() => stepFollower(currentStep + 1)}
         >
           <Button text="Siguente" />

@@ -29,6 +29,7 @@ const GCalendar = () => {
         inline
         minDate={new Date()}
         locale={es}
+        timeFormat="hh:mm aa"
       />
     </div>
   );

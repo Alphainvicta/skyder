@@ -133,11 +133,17 @@
             font-family: inherit;
             width: 100%;
             height: clamp(25.8rem, 28vw, 50.4rem);
+            overflow-y: initial;
 
             .react-datepicker__time-list-item {
-              font-size: clamp(1rem, calc(1vw + 0.1rem), 2rem);
-              font-weight: bold;
+              height: clamp(2.5rem, 3vw, 5rem);
               padding: clamp(0.2rem, 0.3vw, 0.8rem);
+              font-size: clamp(1rem, calc(1vw + 0.1rem), 2rem);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              font-weight: bold;
               transition: 0.2s;
             }
 

@@ -3,7 +3,16 @@ import "./quality-card.css";
 import Input from "../input/input";
 import { ReactComponent as List } from "../../icons/checkmark.svg";
 
-const Qcard = ({ radio, title, video, detail1, detail2, detail3, detail4 }) => (
+const Qcard = ({
+  radio,
+  title,
+  video,
+  detail1,
+  detail2,
+  detail3,
+  detail4,
+  onRadioChange,
+}) => (
   <div className="Qcard_cont">
     <div className="card_cont">
       <div className="title_card">{title}</div>
@@ -34,6 +43,7 @@ const Qcard = ({ radio, title, video, detail1, detail2, detail3, detail4 }) => (
       value={radio}
       type="radio"
       label="Escoger paquete"
+      onChange={() => onRadioChange(radio)}
     />
   </div>
 );
