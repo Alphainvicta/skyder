@@ -1,16 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./quote-step-3.css";
 
 import Input from "../../../../components/input/input.jsx";
 import Button from "../../../../components/button/button.jsx";
 
-export const QuoteStep3 = ({ currentStep, stepFollower }) => {
+export const QuoteStep3 = ({
+  currentStep,
+  stepFollower,
+  formData,
+  handleInputChange,
+}) => {
   const [details, setDetails] = useState("");
   const maxLength = 500;
 
   const handleDetailsChange = (e) => {
     setDetails(e.target.value);
   };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+
+    const form = document.getElementById("skyderForm");
+
+    if (form.reportValidity()) {
+      form.requestSubmit();
+    }
+  };
+
+  useEffect(() => {
+    if (details != null) {
+      handleInputChange("extraDetails", details);
+    }
+  }, [details]);
 
   return (
     <div className="step3_cont">
@@ -26,6 +47,7 @@ export const QuoteStep3 = ({ currentStep, stepFollower }) => {
             type="text"
             label="Nombre"
             value="Nombre"
+            onChange={(e) => handleInputChange("name", e.target.value)}
           />
           <Input
             id="email"
@@ -33,6 +55,7 @@ export const QuoteStep3 = ({ currentStep, stepFollower }) => {
             type="email"
             label="Email"
             value="Email"
+            onChange={(e) => handleInputChange("email", e.target.value)}
           />
           <div className="textarea_cont">
             <label>Detalles extras</label>
@@ -79,8 +102,10 @@ export const QuoteStep3 = ({ currentStep, stepFollower }) => {
           <Button text="Volver" shadowSide={false} />
         </div>
         <div
-          className="right_button"
-          onClick={() => stepFollower(currentStep + 1)}
+          className={`right_button ${
+            formData.name && formData.email ? "" : "disable"
+          }`}
+          onClick={submitForm}
         >
           <Button text="Cotizar" />
         </div>

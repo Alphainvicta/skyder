@@ -30,6 +30,7 @@ export const Quote = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
+    console.log("pepepepepepe");
   };
 
   const renderStep = (step) => {
@@ -50,7 +51,6 @@ export const Quote = () => {
             stepFollower={stepFollower}
             formData={formData}
             handleInputChange={handleInputChange}
-            handleSubmit={handleSubmit}
           />
         );
       case 3:
@@ -60,7 +60,6 @@ export const Quote = () => {
             stepFollower={stepFollower}
             formData={formData}
             handleInputChange={handleInputChange}
-            handleSubmit={handleSubmit}
           />
         );
 
@@ -76,7 +75,11 @@ export const Quote = () => {
     }
   };
 
-  return <form>{renderStep(currentStep)}</form>;
+  return (
+    <form id="skyderForm" onSubmit={handleSubmit}>
+      {renderStep(currentStep)}
+    </form>
+  );
 };
 
 export default Quote;

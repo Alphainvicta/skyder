@@ -10,7 +10,6 @@ export const QuoteStep2 = ({
   stepFollower,
   formData,
   handleInputChange,
-  handleSubmit,
 }) => {
   return (
     <div className="step2_cont">
@@ -38,7 +37,7 @@ export const QuoteStep2 = ({
           className={`right_button ${
             formData.date && formData.location ? "" : "disable"
           }`}
-          onClick={(e) => handleSubmit(e)}
+          onClick={() => stepFollower(currentStep + 1)}
         >
           <Button text="Siguente" />
         </div>

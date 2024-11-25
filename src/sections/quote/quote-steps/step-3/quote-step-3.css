@@ -89,6 +89,16 @@
   .buttons_container {
     display: flex;
     justify-content: space-between;
+
+    .right_button.disable {
+      pointer-events: none;
+      .button_cont {
+        button {
+          background-color: black;
+          transition: 0.5s;
+        }
+      }
+    }
   }
 }
 
@@ -97,12 +107,7 @@
     .block_b {
       display: flex;
       flex-direction: column;
-      .side_a {
-        .input_cont {
-          input {
-          }
-        }
-      }
+
       .side_b {
         .terms_cont {
           .terms_title {

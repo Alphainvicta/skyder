@@ -11,6 +11,15 @@ export const QuoteStep1 = ({
   formData,
   handleInputChange,
 }) => {
+  const [selectedServices, setSelectedServices] = useState({
+    servicio1: false,
+    servicio2: false,
+    servicio3: false,
+    servicio4: false,
+    servicio5: false,
+    servicio6: false,
+    servicio7: false,
+  });
   const [valueSlider, setValueSlider] = useState(15);
 
   const handleSliderChange = (event) => {
@@ -21,21 +30,10 @@ export const QuoteStep1 = ({
   const progressWidth = ((valueSlider - 15) / (150 - 15)) * 100;
 
   const handleCustomTimeInput = (event) => {
-    if (event.target.value)
-      handleInputChange("videoLenght", event.target.value);
-    else handleInputChange("videoLenght", `${valueSlider} segundos`);
+    event.target.value
+      ? handleInputChange("videoLenght", event.target.value)
+      : handleInputChange("videoLenght", `${valueSlider} segundos`);
   };
-
-  const [selectedServices, setSelectedServices] = useState({
-    servicio1: false,
-    servicio2: false,
-    servicio3: false,
-    servicio4: false,
-    servicio5: false,
-    servicio6: false,
-    servicio7: false,
-  });
-
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
 
