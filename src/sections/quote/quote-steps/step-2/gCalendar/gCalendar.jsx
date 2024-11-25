@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import { es } from "date-fns/locale"; // Import Spanish locale
 import "react-datepicker/dist/react-datepicker.css";
 import "./gCalendar.css";
 
-const GCalendar = () => {
+const GCalendar = ({ handleInputChange }) => {
   const [selectedDate, setSelectedDate] = useState(null);
+
+  useEffect(() => {
+    if (selectedDate != null) {
+      const formattedDate = selectedDate.toLocaleString("es-ES", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      });
+      handleInputChange("date", formattedDate);
+    }
+  }, [selectedDate]);
 
   return (
     <div className="g_calendar_cont">

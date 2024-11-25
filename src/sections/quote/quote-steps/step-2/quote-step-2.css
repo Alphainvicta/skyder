@@ -24,6 +24,16 @@
   .buttons_container {
     display: flex;
     justify-content: space-between;
+
+    .right_button.disable {
+      pointer-events: none;
+      .button_cont {
+        button {
+          background-color: black;
+          transition: 0.5s;
+        }
+      }
+    }
   }
 }
 

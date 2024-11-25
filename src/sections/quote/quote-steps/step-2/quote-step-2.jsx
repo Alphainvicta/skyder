@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "./quote-step-2.css";
 
 import Button from "../../../../components/button/button.jsx";
 import GMap from "./gMap/gMap.jsx";
 import GCalendar from "./gCalendar/gCalendar.jsx";
 
-export const QuoteStep2 = ({ currentStep, stepFollower }) => {
+export const QuoteStep2 = ({
+  currentStep,
+  stepFollower,
+  formData,
+  handleInputChange,
+  handleSubmit,
+}) => {
   return (
     <div className="step2_cont">
       <div className="block_a">
@@ -14,10 +20,10 @@ export const QuoteStep2 = ({ currentStep, stepFollower }) => {
       </div>
       <div className="block_b">
         <div className="calendar_cont">
-          <GCalendar />
+          <GCalendar handleInputChange={handleInputChange} />
         </div>
         <div className="map_cont">
-          <GMap />
+          <GMap handleInputChange={handleInputChange} />
         </div>
       </div>
       <hr />
@@ -29,8 +35,10 @@ export const QuoteStep2 = ({ currentStep, stepFollower }) => {
           <Button text="Volver" shadowSide={false} />
         </div>
         <div
-          className="right_button"
-          onClick={() => stepFollower(currentStep + 1)}
+          className={`right_button ${
+            formData.date && formData.location ? "" : "disable"
+          }`}
+          onClick={(e) => handleSubmit(e)}
         >
           <Button text="Siguente" />
         </div>

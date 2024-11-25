@@ -55,7 +55,7 @@ export const QuoteStep1 = ({
       // Call handleInputChange with the updated service names
       handleInputChange("serviceList", selectedServiceNames);
 
-      return updatedServices; // Return the updated state
+      return updatedServices;
     });
   };
 

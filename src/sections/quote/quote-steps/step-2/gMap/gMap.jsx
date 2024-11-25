@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   GoogleMap,
   LoadScript,
@@ -11,7 +11,7 @@ import Input from "../../../../../components/input/input.jsx";
 
 const libraries = ["places"];
 
-export const GMap = () => {
+export const GMap = ({ handleInputChange }) => {
   const [mapCenter, setMapCenter] = useState({
     lat: 20.659698,
     lng: -103.349609,
@@ -53,15 +53,12 @@ export const GMap = () => {
       const data = await response.json();
       if (data.status === "OK" && data.results[0]) {
         setLocationText(data.results[0].formatted_address);
-        setLocationTextField(data.results[0].formatted_address);
       } else {
         setLocationText(`Lat: ${lat}, Lng: ${lng}`);
-        setLocationTextField(`Lat: ${lat}, Lng: ${lng}`);
       }
     } catch (error) {
       setLocationText(`Lat: ${lat}, Lng: ${lng}`);
       console.error("Error fetching address:", error);
-      setLocationTextField(`Lat: ${lat}, Lng: ${lng}`);
     }
   };
 
@@ -72,6 +69,13 @@ export const GMap = () => {
   const onLoadAutocomplete = (autocompleteInstance) => {
     setAutocomplete(autocompleteInstance);
   };
+
+  useEffect(() => {
+    if (locationText != null) {
+      handleInputChange("location", locationText);
+      setLocationTextField(locationText);
+    }
+  }, [locationText]);
 
   return (
     <div>

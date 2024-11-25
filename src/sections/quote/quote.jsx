@@ -7,7 +7,6 @@ import QuoteStep3 from "./quote-steps/step-3/quote-step-3";
 export const Quote = () => {
   const [currentStep, stepFollower] = useState(1);
 
-  // State to store all form data
   const [formData, setFormData] = useState({
     serviceList: "",
     qualityOutput: "",
@@ -49,6 +48,7 @@ export const Quote = () => {
           <QuoteStep2
             currentStep={currentStep}
             stepFollower={stepFollower}
+            formData={formData}
             handleInputChange={handleInputChange}
             handleSubmit={handleSubmit}
           />
@@ -58,6 +58,7 @@ export const Quote = () => {
           <QuoteStep3
             currentStep={currentStep}
             stepFollower={stepFollower}
+            formData={formData}
             handleInputChange={handleInputChange}
             handleSubmit={handleSubmit}
           />
