@@ -9,8 +9,10 @@ export const QuoteStep3 = ({
   stepFollower,
   formData,
   handleInputChange,
+  isSuccess,
 }) => {
   const [details, setDetails] = useState(formData.extraDetails);
+  const [isSubmitted, setIssubmitted] = useState(false);
   const maxLength = 500;
 
   const handleDetailsChange = (e) => {
@@ -24,6 +26,7 @@ export const QuoteStep3 = ({
 
     if (form.reportValidity()) {
       form.requestSubmit();
+      setIssubmitted(true);
     }
   };
 
@@ -97,20 +100,41 @@ export const QuoteStep3 = ({
       </div>
       <hr />
       <div className="buttons_container">
-        <div
-          className="left_button"
-          onClick={() => stepFollower(currentStep - 1)}
-        >
-          <Button text="Volver" shadowSide={false} />
+        <div className={`buttons ${isSubmitted ? "submitted" : ""}`}>
+          <div
+            className="left_button"
+            onClick={() => stepFollower(currentStep - 1)}
+          >
+            <Button text="Volver" shadowSide={false} />
+          </div>
+          <div
+            className={`right_button ${
+              formData.name && formData.email ? "" : "disable"
+            }`}
+            onClick={submitForm}
+          >
+            <Button text="Cotizar" setScroll={false} />
+          </div>
         </div>
-        <div
-          className={`right_button ${
-            formData.name && formData.email ? "" : "disable"
-          }`}
-          onClick={submitForm}
-        >
-          <Button text="Cotizar" />
-        </div>
+        {isSubmitted ? (
+          <div
+            className={`form_submitted ${
+              isSuccess != null ? (isSuccess ? "success" : "failure") : ""
+            }`}
+          >
+            {isSuccess != null ? (
+              isSuccess ? (
+                <p>Exitosamente</p>
+              ) : (
+                <p>Intenta mas tarde</p>
+              )
+            ) : (
+              <p>Cotización enviada</p>
+            )}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

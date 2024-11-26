@@ -48,20 +48,6 @@ class Qcardlist extends React.Component {
     this.props.handleInputChange("qualityOutput", selectedRadio);
   };
 
-  // componentDidMount() {
-  //   this.storedChecked();
-  // }
-
-  // storedChecked = () => {
-  //   const { qualityOutput } = this.props.formData;
-  //   if (qualityOutput) {
-  //     const radioElement = document.getElementById(qualityOutput);
-  //     if (radioElement) {
-  //       radioElement.checked = true;
-  //     }
-  //   }
-  // };
-
   render() {
     return this.state.cards.map(({ id, ...cardsprops }) => (
       <Qcard

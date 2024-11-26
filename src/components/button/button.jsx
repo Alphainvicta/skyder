@@ -1,11 +1,12 @@
 import "./button.css";
 import React from "react";
 
-const Button = ({ text, shadowSide = true }) => {
+const Button = ({ text, shadowSide = true, setScroll = true }) => {
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-    });
+    if (setScroll)
+      window.scrollTo({
+        top: 0,
+      });
   };
 
   return (

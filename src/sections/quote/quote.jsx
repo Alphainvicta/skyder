@@ -6,6 +6,7 @@ import QuoteStep3 from "./quote-steps/step-3/quote-step-3";
 
 export const Quote = () => {
   const [currentStep, stepFollower] = useState(1);
+  const [isSuccess, setSuccess] = useState(null);
 
   const [formData, setFormData] = useState({
     finalServiceList: "",
@@ -37,9 +38,29 @@ export const Quote = () => {
     }));
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+
+    try {
+      const response = await fetch(
+        "https://api.axolotelabs.com/skyder/form_mailer.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(formData).toString(),
+        }
+      );
+
+      if (response.status === 200) {
+        setSuccess(true);
+      } else {
+        setSuccess(false);
+      }
+    } catch (error) {
+      setSuccess(false);
+    }
   };
 
   const renderStep = (step) => {
@@ -69,6 +90,7 @@ export const Quote = () => {
             stepFollower={stepFollower}
             formData={formData}
             handleInputChange={handleInputChange}
+            isSuccess={isSuccess}
           />
         );
 

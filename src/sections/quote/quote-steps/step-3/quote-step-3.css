@@ -87,18 +87,76 @@
   }
 
   .buttons_container {
+    position: relative;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
 
-    .right_button.disable {
-      pointer-events: none;
-      .button_cont {
-        button {
-          background-color: black;
-          transition: 0.5s;
+    .buttons {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .right_button.disable {
+        pointer-events: none;
+        .button_cont {
+          button {
+            background-color: black;
+            transition: 0.5s;
+          }
         }
       }
     }
+
+    .submitted {
+      pointer-events: none;
+      animation: form_buttons 1s ease-in-out forwards;
+    }
+
+    .form_submitted {
+      position: absolute;
+      left: clamp(-11rem, -8vw, -5.5rem);
+      bottom: 0rem;
+      width: 100vw;
+      height: clamp(calc(100% + 2.5rem), calc(100% + 3vw), calc(100% + 5rem));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      animation: form_submited 1s ease-in-out;
+      transition: 0.2s;
+
+      color: white;
+      font-size: clamp(1rem, calc(3vw + 0.1rem), 2rem);
+    }
+
+    .success {
+      background-color: #396ded;
+    }
+
+    .failure {
+      background-color: red;
+    }
+  }
+}
+
+@keyframes form_submited {
+  0% {
+    left: 100vw;
+  }
+
+  100% {
+    left: clamp(-11rem, -8vw, -5.5rem);
+  }
+}
+
+@keyframes form_buttons {
+  0% {
+    left: 0rem;
+  }
+
+  100% {
+    left: -100vw;
   }
 }
 
