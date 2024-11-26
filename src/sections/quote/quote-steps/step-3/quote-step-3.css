@@ -122,12 +122,39 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 1rem;
       background-color: black;
       animation: form_submited 1s ease-in-out;
       transition: 0.2s;
 
       color: white;
       font-size: clamp(1rem, calc(3vw + 0.1rem), 2rem);
+
+      .form_loading {
+        position: relative;
+        top: 0.5rem;
+        display: flex;
+        gap: 1rem;
+        span {
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 2rem;
+          background-color: white;
+
+          animation: form_loading 0.5s ease-in infinite alternate;
+        }
+
+        span:nth-child(1) {
+          animation-delay: 0s;
+        }
+        span:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+        span:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+      }
     }
 
     .success {
@@ -147,6 +174,16 @@
 
   100% {
     left: clamp(-11rem, -8vw, -5.5rem);
+  }
+}
+
+@keyframes form_loading {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
   }
 }
 

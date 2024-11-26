@@ -124,12 +124,19 @@ export const QuoteStep3 = ({
           >
             {isSuccess != null ? (
               isSuccess ? (
-                <p>Exitosamente</p>
+                <p>¡Con Exito!</p>
               ) : (
-                <p>Intenta mas tarde</p>
+                <p>Intenta más tarde</p>
               )
             ) : (
-              <p>Cotización enviada</p>
+              <>
+                <p>Enviando cotización</p>
+                <div className="form_loading">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </>
             )}
           </div>
         ) : (
