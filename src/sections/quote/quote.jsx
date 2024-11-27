@@ -1,10 +1,12 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 import QuoteStep1 from "./quote-steps/step-1/quote-step-1";
 import QuoteStep2 from "./quote-steps/step-2/quote-step-2";
 import QuoteStep3 from "./quote-steps/step-3/quote-step-3";
 
 export const Quote = () => {
+  const navigate = useNavigate();
   const [currentStep, stepFollower] = useState(1);
   const [isSuccess, setSuccess] = useState(null);
 
@@ -62,6 +64,21 @@ export const Quote = () => {
       setSuccess(false);
     }
   };
+
+  useEffect(() => {
+    if (isSuccess != null) {
+      const waitForDelay = async () => {
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        navigate("/");
+        window.scrollTo({
+          top: 0,
+        });
+        // window.location.reload();
+      };
+
+      waitForDelay();
+    }
+  }, [isSuccess]);
 
   const renderStep = (step) => {
     switch (step) {
