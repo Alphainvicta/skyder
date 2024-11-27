@@ -130,11 +130,13 @@ export const QuoteStep3 = ({
               )
             ) : (
               <>
-                <p>Enviando cotización</p>
-                <div className="form_loading">
-                  <span />
-                  <span />
-                  <span />
+                <div className="form_loading_cont">
+                  <p>Enviando cotización</p>
+                  <div className="form_loading_dots">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
                 </div>
               </>
             )}

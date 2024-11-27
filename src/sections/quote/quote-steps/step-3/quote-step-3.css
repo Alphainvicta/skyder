@@ -128,41 +128,49 @@
       transition: 0.2s;
 
       color: white;
-      font-size: clamp(1rem, calc(3vw + 0.1rem), 2rem);
+      font-size: clamp(2rem, calc(3vw + 0.1rem), 4rem);
 
-      .form_loading {
-        position: relative;
-        top: 0.5rem;
+      .form_loading_cont {
+        margin: 0rem;
         display: flex;
+        align-items: baseline;
         gap: 1rem;
-        span {
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          border-radius: 2rem;
-          background-color: white;
 
-          animation: form_loading 0.5s ease-in infinite alternate;
-        }
+        .form_loading_dots {
+          display: flex;
+          gap: 1rem;
 
-        span:nth-child(1) {
-          animation-delay: 0s;
-        }
-        span:nth-child(2) {
-          animation-delay: 0.2s;
-        }
-        span:nth-child(3) {
-          animation-delay: 0.4s;
+          span {
+            display: block;
+            width: clamp(0.5rem, 0.6vw, 1rem);
+            height: clamp(0.5rem, 0.6vw, 1rem);
+            border-radius: 2rem;
+            background-color: white;
+
+            animation: form_loading 0.5s ease-in infinite alternate;
+          }
+
+          span:nth-child(1) {
+            animation-delay: 0s;
+          }
+          span:nth-child(2) {
+            animation-delay: 0.2s;
+          }
+          span:nth-child(3) {
+            animation-delay: 0.4s;
+          }
         }
       }
     }
 
     .success {
       background-color: #396ded;
+      transition: 0.2s;
     }
 
     .failure {
       background-color: red;
+      transition: 0.2s;
     }
   }
 }
