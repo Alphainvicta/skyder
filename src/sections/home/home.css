@@ -31,7 +31,7 @@
     align-items: center;
     gap: clamp(2rem, 3vw, 5rem);
     .main_title {
-      font-size: clamp(3rem, calc(6vw + 0.1rem), 9.5rem);
+      font-size: clamp(4rem, calc(6vw + 0.1rem), 9.5rem);
       font-weight: bold;
       span {
         color: #396ded;

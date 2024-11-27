@@ -36,13 +36,16 @@
 
         textarea {
           height: clamp(15rem, 15vw, 20rem);
-          padding-left: 1rem;
+          width: 60%;
+          padding: 0rem;
           background: #f0f0f0;
           border: clamp(0.2rem, 0.2vw, 0.3rem) solid black;
           resize: none;
 
           font-weight: bold;
-          font-size: clamp(1.2rem, calc(2vw + 0.1rem), 2.4rem);
+          text-indent: 1rem;
+          line-height: 3rem;
+          font-size: clamp(1.6rem, calc(2vw + 0.1rem), 2.4rem);
           color: rgba(0, 0, 0, 0.7);
         }
 
@@ -54,6 +57,7 @@
 
         .char_count {
           position: relative;
+          width: 55%;
           bottom: clamp(1.5rem, 3vw, 3rem);
           right: clamp(0.75rem, 2vw, 1.5rem);
           align-self: flex-end;
@@ -73,12 +77,12 @@
         background-color: white;
 
         .terms_title {
-          font-size: clamp(1.4rem, calc(2vw + 0.1rem), 2.8rem);
+          font-size: clamp(2rem, calc(2.2vw + 0.1rem), 2.8rem);
           font-weight: bold;
         }
 
         p {
-          font-size: clamp(1.2rem, calc(2vw + 0.1rem), 2.4rem);
+          font-size: clamp(1.6rem, calc(2vw + 0.1rem), 2.4rem);
           opacity: 70%;
           text-align: justify;
         }
@@ -211,6 +215,33 @@
       display: flex;
       flex-direction: column;
 
+      .side_a {
+        .input_cont {
+          width: 100%;
+          label {
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            input {
+              margin: 0;
+              padding: 0;
+              width: 100%;
+            }
+          }
+        }
+
+        .textarea_cont {
+          position: relative;
+          textarea {
+            width: 100%;
+          }
+
+          .char_count {
+            width: auto;
+          }
+        }
+      }
+
       .side_b {
         .terms_cont {
           .terms_title {
@@ -220,9 +251,20 @@
       }
     }
     .buttons_container {
-      flex-direction: column-reverse;
-      gap: 2rem;
-      width: 100%;
+      .buttons {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+
+        .right_button {
+          width: 80%;
+        }
+
+        .left_button {
+          width: 80%;
+        }
+      }
     }
   }
 }

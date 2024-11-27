@@ -46,8 +46,17 @@
     }
     .buttons_container {
       flex-direction: column-reverse;
+      align-items: center;
       gap: 2rem;
       width: 100%;
+
+      .right_button {
+        width: 80%;
+      }
+
+      .left_button {
+        width: 80%;
+      }
     }
   }
 }

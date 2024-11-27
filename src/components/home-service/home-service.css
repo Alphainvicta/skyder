@@ -14,11 +14,11 @@
       gap: clamp(2rem, 4vw, 8rem);
 
       .service_title {
-        font-size: clamp(1.6rem, calc(2vw + 0.1rem), 3.8rem);
+        font-size: clamp(2.2rem, calc(2.2vw + 0.1rem), 3.8rem);
         font-weight: bold;
       }
       .service_description {
-        font-size: clamp(1.2rem, calc(1vw + 0.1rem), 2.4rem);
+        font-size: clamp(1.6rem, calc(1vw + 0.1rem), 2.4rem);
         opacity: 70%;
       }
 
@@ -57,7 +57,7 @@
         text-align: center;
 
         .button {
-          width: 100%;
+          width: 80%;
         }
       }
 

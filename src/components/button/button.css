@@ -26,9 +26,9 @@
 
 @media only screen and (max-width: 43rem) {
   .button_cont {
-    width: 100%;
     button {
       width: 100%;
+      border-radius: 1rem;
     }
   }
 }
