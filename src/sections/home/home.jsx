@@ -21,7 +21,6 @@ const Home = () => {
     fillOpacity = Math.max(0, Math.min(fillOpacity, 1));
     strokeOpacity = Math.max(0, Math.min(strokeOpacity, 1));
 
-    // New variable for strokeDashoffset
     let strokeDashoffset = Math.max(
       0,
       Math.min((-1 + normalizedScroll2) * 1000, 1000)
@@ -33,7 +32,6 @@ const Home = () => {
         path.style.fillOpacity = fillOpacity.toString();
         path.style.strokeOpacity = strokeOpacity.toString();
 
-        // Add stroke-dasharray when strokeOpacity reaches 1
         if (strokeOpacity === 1) {
           path.style.strokeDasharray = "1000";
           path.style.strokeDashoffset = strokeDashoffset.toString();
@@ -57,7 +55,7 @@ const Home = () => {
   return (
     <div className="home_cont">
       <div className="vector_cont">
-        <Homevector ref={svgRef} /> {/* Attach ref to SVG */}
+        <Homevector ref={svgRef} />
       </div>
       <div className="main_screen">
         <div className="main_title">
