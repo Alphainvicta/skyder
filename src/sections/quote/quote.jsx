@@ -73,7 +73,6 @@ export const Quote = () => {
         window.scrollTo({
           top: 0,
         });
-        // window.location.reload();
       };
 
       waitForDelay();

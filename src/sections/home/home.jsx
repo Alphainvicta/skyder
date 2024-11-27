@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./home.css";
 import { ReactComponent as Homevector } from "../../icons/homeVector.svg";
 import Homelist from "../../components/home-service/home-service-list.jsx";

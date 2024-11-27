@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
-import { es } from "date-fns/locale"; // Import Spanish locale
+import { es } from "date-fns/locale";
 import "react-datepicker/dist/react-datepicker.css";
 import "./gCalendar.css";
 
