@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;500&display=swap");
 
 .App {
-  padding: 0 clamp(5.5rem, 8vw, 11rem);
+  margin: 0 clamp(5.5rem, 8vw, 11rem);
   display: flex;
   flex-direction: column;
 }

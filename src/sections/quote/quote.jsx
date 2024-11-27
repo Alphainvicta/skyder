@@ -78,7 +78,7 @@ export const Quote = () => {
 
       waitForDelay();
     }
-  }, [isSuccess]);
+  }, [isSuccess, navigate]);
 
   const renderStep = (step) => {
     switch (step) {

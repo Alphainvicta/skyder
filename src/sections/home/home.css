@@ -13,13 +13,17 @@
       position: absolute;
       width: 100vw;
       height: auto;
+      path {
+        animation: vector_load_animation 2s ease-in;
+      }
     }
   }
 
   .main_screen {
-    padding: clamp(5rem, 8vw, 22rem) 0;
+    height: clamp(22rem, 35vw, 88rem);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: clamp(2rem, 3vw, 5rem);
     .main_title {
@@ -34,5 +38,22 @@
       font-size: clamp(1.6rem, calc(2vw + 0.1rem), 2.4rem);
       opacity: 70%;
     }
+  }
+}
+
+@keyframes vector_load_animation {
+  0% {
+    stroke: black;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    fill: transparent;
+  }
+
+  80% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 800;
+    stroke: transparent;
+    fill: transparent;
+    stroke: black;
   }
 }
