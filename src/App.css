@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.mobile {
+  margin: 0 clamp(2rem, 3vw, 4rem);
+}
+
 body {
   font-family: "Manrope";
   overflow-x: hidden;

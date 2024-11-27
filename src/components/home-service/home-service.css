@@ -54,6 +54,7 @@
 
       .text_cont {
         align-items: center;
+        text-align: center;
 
         .button {
           width: 100%;

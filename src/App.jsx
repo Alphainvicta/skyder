@@ -42,10 +42,10 @@ function App() {
       googleMapsApiKey={process.env.REACT_APP_MAPS_API}
       libraries={libraries}
     >
-      <div className="App">
+      <div className={`App ${deviceType ? "mobile" : ""}`}>
         <Nav isMobile={deviceType} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home isMobile={deviceType} />} />
           <Route
             path="/services/:service"
             element={<Servicelist path={pathname.pathname} />}
