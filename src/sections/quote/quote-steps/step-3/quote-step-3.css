@@ -31,12 +31,13 @@
       }
 
       .textarea_cont {
+        position: relative;
+        width: 60%;
         display: flex;
         flex-direction: column;
 
         textarea {
           height: clamp(15rem, 15vw, 20rem);
-          width: 60%;
           padding: 0rem;
           background: #f0f0f0;
           border: clamp(0.2rem, 0.2vw, 0.3rem) solid black;
@@ -57,11 +58,10 @@
 
         .char_count {
           position: relative;
-          width: 55%;
-          bottom: clamp(1.5rem, 3vw, 3rem);
+          bottom: clamp(1.9rem, 3vw, 3rem);
           right: clamp(0.75rem, 2vw, 1.5rem);
           align-self: flex-end;
-          font-size: clamp(0.7rem, calc(1vw + 0.1rem), 1.4rem);
+          font-size: clamp(1.2rem, calc(1vw + 0.1rem), 1.4rem);
           opacity: 70%;
         }
       }
@@ -231,10 +231,7 @@
         }
 
         .textarea_cont {
-          position: relative;
-          textarea {
-            width: 100%;
-          }
+          width: 100%;
 
           .char_count {
             width: auto;
