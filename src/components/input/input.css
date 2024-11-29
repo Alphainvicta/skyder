@@ -6,7 +6,7 @@
   input {
     margin: 0rem;
     width: clamp(20rem, 20vw, 30rem);
-    height: clamp(3rem, 3vw, 5rem);
+    height: 5rem;
     border: clamp(0.2rem, 0.2vw, 0.3rem) solid black;
     background: #f0f0f0;
 

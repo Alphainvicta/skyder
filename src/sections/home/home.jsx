@@ -54,7 +54,7 @@ const Home = ({ isMobile }) => {
 
   return (
     <div className="home_cont">
-      <div className={`vector_cont ${isMobile ? "mobile" : ""}`}>
+      <div className="vector_cont">
         <Homevector ref={svgRef} />
       </div>
       <div className="main_screen">

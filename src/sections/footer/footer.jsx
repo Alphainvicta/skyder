@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.css";
 
 const Footer = () => (
-  <footer>
+  <footer id="#footer">
     <div className="side_a">
       <div className="rights">
         Skyder © 2024 - todos los derechos reservados.

@@ -2,7 +2,7 @@
   position: relative;
   .vector_cont {
     top: clamp(-15rem, -7vw, -3rem);
-    right: clamp(5.5rem, 8vw, 11rem);
+    right: clamp(2rem, 3vw, 4rem);
     width: 100%;
     position: absolute;
     display: flex;
@@ -17,10 +17,6 @@
         animation: vector_load_animation 2s ease-in;
       }
     }
-  }
-
-  .mobile {
-    right: 0;
   }
 
   .main_screen {

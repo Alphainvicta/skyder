@@ -12,7 +12,7 @@ export const QuoteStep3 = ({
   isSuccess,
 }) => {
   const [details, setDetails] = useState(formData.extraDetails);
-  const [isSubmitted, setIssubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const maxLength = 500;
 
   const handleDetailsChange = (e) => {
@@ -26,7 +26,7 @@ export const QuoteStep3 = ({
 
     if (form.reportValidity()) {
       form.requestSubmit();
-      setIssubmitted(true);
+      setIsSubmitted(true);
     }
   };
 

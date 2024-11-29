@@ -26,22 +26,22 @@ nav {
           gap: clamp(2rem, 2vw, 5rem);
           a {
             svg {
-              height: clamp(1.5rem, 2vw, 3.2rem);
+              height: clamp(2rem, 2vw, 3.2rem);
               width: auto;
             }
           }
         }
 
         button {
-          width: clamp(2.6rem, 6vw, 8rem);
-          height: clamp(0.8rem, 1.5vw, 2rem);
+          width: clamp(3rem, 6vw, 8rem);
+          height: clamp(1.2rem, 1.5vw, 2rem);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           span {
             background-color: black;
             width: inherit;
-            height: clamp(0.2rem, 0.2vw, 0.3rem);
+            height: clamp(0.25rem, 0.2vw, 0.3rem);
             transition: transform 0.3s ease, background-color 0.3s ease;
           }
         }
@@ -78,10 +78,10 @@ nav {
           gap: clamp(2rem, 2vw, 5rem);
           p {
             color: white;
-            font-size: clamp(1rem, 1.5vw, 3rem);
+            font-size: clamp(1.2rem, 1.5vw, 3rem);
           }
           svg {
-            height: clamp(1.5rem, 2vw, 3rem);
+            height: clamp(2rem, 2vw, 3rem);
             width: auto;
             path {
               fill: white;
@@ -90,15 +90,15 @@ nav {
         }
         button {
           position: relative;
-          width: clamp(2.6rem, 5vw, 8rem);
-          height: clamp(0.8rem, 1.5vw, 2rem);
+          width: clamp(3rem, 5vw, 8rem);
+          height: clamp(1rem, 1.5vw, 2rem);
           display: flex;
           flex-direction: column;
           justify-content: center;
           span {
             background-color: white;
             width: 100%;
-            height: clamp(0.2rem, 0.2vw, 0.3rem);
+            height: clamp(0.25rem, 0.2vw, 0.3rem);
             transition: transform 0.3s ease, background-color 0.3s ease;
           }
           .bar1 {
@@ -172,9 +172,9 @@ nav {
     }
     .mobile {
       gap: clamp(2rem, 1vw, 4rem);
-      font-size: clamp(2.5rem, calc(3vw + 0.1rem), 5rem);
+      font-size: clamp(2.1rem, calc(3vw + 0.1rem), 5rem);
       .nav_links.service {
-        margin-left: clamp(2.5rem, 2vw, 4rem);
+        margin-left: clamp(2rem, 2vw, 4rem);
       }
     }
   }

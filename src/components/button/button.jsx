@@ -3,10 +3,17 @@ import React from "react";
 
 const Button = ({ text, shadowSide = true, setScroll = true }) => {
   const scrollToTop = () => {
-    if (setScroll)
+    if (setScroll) {
       window.scrollTo({
         top: 0,
       });
+    } else {
+      const element = document.getElementById("#footer");
+      element.scrollTo({
+        top: element.scrollHeight,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (

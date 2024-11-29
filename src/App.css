@@ -1,13 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;500&display=swap");
 
 .App {
-  margin: 0 clamp(5.5rem, 8vw, 11rem);
+  margin: 0 clamp(2rem, 3vw, 4rem);
   display: flex;
   flex-direction: column;
-}
-
-.mobile {
-  margin: 0 clamp(2rem, 3vw, 4rem);
 }
 
 body {
