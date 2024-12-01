@@ -180,8 +180,7 @@ nav {
   }
   .nav_background {
     position: absolute;
-    left: calc(-50vw + 50%);
-    top: 0;
+    transform: translateX(calc(clamp(2rem, 3vw, 4rem) * -1));
     z-index: -1;
     width: 100vw;
     height: 100%;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { LoadScript } from "@react-google-maps/api";
@@ -13,6 +13,7 @@ const libraries = ["places"];
 
 function App() {
   const pathname = useLocation();
+  const footerRef = useRef(<footer />);
   const [deviceType, setDeviceType] = useState(false);
 
   const checkDeviceType = () => {
@@ -50,9 +51,9 @@ function App() {
             path="/services/:service"
             element={<Servicelist path={pathname.pathname} />}
           />
-          <Route path="/quote" element={<Quote />} />
+          <Route path="/quote" element={<Quote footerRef={footerRef} />} />
         </Routes>
-        <Footer />
+        <Footer footerRef={footerRef} />
       </div>
     </LoadScript>
   );

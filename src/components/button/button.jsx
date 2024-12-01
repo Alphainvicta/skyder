@@ -1,18 +1,23 @@
 import "./button.css";
 import React from "react";
 
-const Button = ({ text, shadowSide = true, setScroll = true }) => {
+const Button = ({
+  text,
+  shadowSide = true,
+  setScroll = true,
+  footerRef = null,
+}) => {
   const scrollToTop = () => {
     if (setScroll) {
       window.scrollTo({
         top: 0,
       });
     } else {
-      const element = document.getElementById("#footer");
-      element.scrollTo({
-        top: element.scrollHeight,
-        behavior: "smooth",
-      });
+      if (footerRef != null) {
+        footerRef.current?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     }
   };
 

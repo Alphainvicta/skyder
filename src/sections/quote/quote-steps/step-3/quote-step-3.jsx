@@ -10,6 +10,7 @@ export const QuoteStep3 = ({
   formData,
   handleInputChange,
   isSuccess,
+  footerRef,
 }) => {
   const [details, setDetails] = useState(formData.extraDetails);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -25,8 +26,8 @@ export const QuoteStep3 = ({
     const form = document.getElementById("skyderForm");
 
     if (form.reportValidity()) {
-      form.requestSubmit();
       setIsSubmitted(true);
+      form.requestSubmit();
     }
   };
 
@@ -113,7 +114,7 @@ export const QuoteStep3 = ({
             }`}
             onClick={submitForm}
           >
-            <Button text="Cotizar" setScroll={false} />
+            <Button text="Cotizar" setScroll={false} footerRef={footerRef} />
           </div>
         </div>
         {isSubmitted ? (
@@ -129,16 +130,12 @@ export const QuoteStep3 = ({
                 <p>Intenta más tarde</p>
               )
             ) : (
-              <>
-                <div className="form_loading_cont">
-                  <p>Enviando cotización</p>
-                  <div className="form_loading_dots">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
+              <div className="form_loading_cont">
+                <p>Enviando cotización</p>
+                <div className="form_loading_dots">
+                  <span />
                 </div>
-              </>
+              </div>
             )}
           </div>
         ) : (

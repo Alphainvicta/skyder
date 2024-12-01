@@ -5,7 +5,7 @@ import QuoteStep1 from "./quote-steps/step-1/quote-step-1";
 import QuoteStep2 from "./quote-steps/step-2/quote-step-2";
 import QuoteStep3 from "./quote-steps/step-3/quote-step-3";
 
-export const Quote = () => {
+export const Quote = ({ footerRef }) => {
   const navigate = useNavigate();
   const [currentStep, stepFollower] = useState(1);
   const [isSuccess, setSuccess] = useState(null);
@@ -107,6 +107,7 @@ export const Quote = () => {
             formData={formData}
             handleInputChange={handleInputChange}
             isSuccess={isSuccess}
+            footerRef={footerRef}
           />
         );
 

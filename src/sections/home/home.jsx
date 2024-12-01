@@ -3,7 +3,7 @@ import "./home.css";
 import { ReactComponent as Homevector } from "../../icons/homeVector.svg";
 import Homelist from "../../components/home-service/home-service-list.jsx";
 
-const Home = ({ isMobile }) => {
+const Home = () => {
   const svgRef = useRef(null);
 
   const handleScroll = () => {
