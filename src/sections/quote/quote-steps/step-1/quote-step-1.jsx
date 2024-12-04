@@ -49,8 +49,8 @@ export const QuoteStep1 = ({
   useEffect(() => {
     if (String(valueSlider) !== String(formData.videoLenght)) {
       handleInputChange("videoLenght", valueSlider);
-      handleInputChange("videoLengthInput", null);
-      setValueInput(null);
+      handleInputChange("videoLengthInput", "");
+      setValueInput("");
       if (document.getElementById("otroTiempoText"))
         document.getElementById("otroTiempoText").value = "";
     }
